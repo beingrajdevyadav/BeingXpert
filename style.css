@@ -9,18 +9,3 @@
     font-family: "Poppins", serif;
 }
 
-.container{
-    max-width: 1300px;
-    margin: auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px){
-    .container{
-        padding: 0 10px;
-    }
-    .container img{
-        width: 250px;
-    }
-}
