@@ -24,7 +24,20 @@ header{
     background-color: #213555;
     color: #ddd;
 }
-
+header .menu {
+    background-color: #3E5879;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+header .menu:hover{
+    transform: rotate(-180deg);
+}
 main{
     display: flex;
     justify-content:space-between;
@@ -54,14 +67,19 @@ main{
 #navbar ul li:hover{
     background-color: #213555;
     color: #ddd;
-}
+} 
 #navbar ul li.active{
     background-color: #213555;
     color: #ddd;
 }
+#navbar ul li.active i{
+    font-size: 18px;
+}
 #navbar ul li i{
     margin-right: .25rem;
+    transition: all .3s ease;
 }
+
 #navbar p{
     padding: 10px;
     font-size: 12px;
@@ -75,6 +93,10 @@ main{
     display: inline-flex;
     flex-direction: column;
     margin: 0 .5rem;
+    transition: all .5s ease;
+}
+#navbar p a:hover{
+    color: #213555;
 }
 #navbar p a i{
     font-size: 18px;
