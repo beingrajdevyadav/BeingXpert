@@ -41,6 +41,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or support, please contact us at support@institute-management.com.
+For any questions or support, Please, our developers team -   [Rajdev Yadav](https://www.linkedin.com/in/beingrajdevyadav/) And  [Vyshnavi Yendluri](https://www.linkedin.com/in/vyshnavi-yendluri-a21ba32b3/).
 
 Thank you for using the BeingXpert!
