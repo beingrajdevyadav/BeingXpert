@@ -95,12 +95,11 @@ main{
     margin: 0 .5rem;
     transition: all .5s ease;
 }
-#navbar p a:hover{
-    color: #213555;
-}
+
 #navbar p a i{
     font-size: 18px;
 }
+
 #root{
     width: 85%;
     height: 100%;
