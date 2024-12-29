@@ -1,0 +1,36 @@
+>>>>>>>>>>> 30/12/2024 >>>>>>>
+## Add Book Form Input Fields
+1. Title - Text
+2. Author - Text
+3. ISBN - Text
+4. Publisher - Text
+5. Publication Date - Date
+6. Genre - Text
+7. Number of Pages - Number
+8. Language - Text
+9. Description - Textarea
+
+
+## Add Course Form Input Fields
+1. Course Name - Text
+2. Course Code - Text
+3. Instructor - Text
+4. Duration - Number
+5. Start Date - Date
+6. End Date - Date
+7. Credits - Number
+8. Description - Textarea
+
+
+## Add Student Form Input Fields
+1. First Name - Text
+2. Last Name - Text
+3. Student ID - Text
+4. Date of Birth - Date
+5. Email - Email
+6. Phone Number - Tel
+7. Address - Textarea
+8. Enrollment Date - Date
+9. Major - Text
+10. GPA - Number
+---------------------------------------
