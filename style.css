@@ -55,6 +55,10 @@ main{
     background-color: #213555;
     color: #ddd;
 }
+#navbar ul li.active{
+    background-color: #213555;
+    color: #ddd;
+}
 #navbar ul li i{
     margin-right: .25rem;
 }
@@ -64,11 +68,23 @@ main{
     transition: 0.3s;
     text-align: center;
 }
-
-#render{
+ 
+#navbar p a{
+    color: #ddd;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 .5rem;
+}
+#navbar p a i{
+    font-size: 18px;
+}
+#root{
     width: 85%;
     height: 100%;
     background-color: #f1f1f1;
     color: #555;
     padding: 1rem;
+    overflow-x: hidden ;
+    overflow-y: auto;
 }
