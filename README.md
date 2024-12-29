@@ -38,11 +38,11 @@ We welcome contributions to improve the BeingXpert. Please follow these steps to
 ## License
 You don't need any kind of software licences because it's two students project .
 We offer you : 
- - **Freedom to Use and Share** : This [BeingXpert] is completely free to use, modify, and share with others. We believe that knowledge and innovation should be accessible to everyone, without any restrictions or limitations.
- - **No Strings Attached** : You don't need to worry about obtaining a licence, paying fees, or seeking permission to use this [BeingXpert]. It's yours to use, as you see fit.
- - **Empowering Creativity and Collaboration** : By making this [BeingXpert] available without a license, we hope to empower individuals and communities to create, innovate, and collaborate without any barriers.
- - **A Gift to the Community** : We're proud to offer this [BeingXpert] as a gift to the community, with the hope that it will make a positive impact on people's lives.
- - **Use, Share and Enjoy!** : So go ahead, use, share, and enjoy this [BeingXpert] without any worries or restrictions. 
+ - **Freedom to Use and Share** : This **BeingXpert** is completely free to use, modify, and share with others. We believe that knowledge and innovation should be accessible to everyone, without any restrictions or limitations.
+ - **No Strings Attached** : You don't need to worry about obtaining a licence, paying fees, or seeking permission to use this **BeingXpert**. It's yours to use, as you see fit.
+ - **Empowering Creativity and Collaboration** : By making this **BeingXpert** available without a license, we hope to empower individuals and communities to create, innovate, and collaborate without any barriers.
+ - **A Gift to the Community** : We're proud to offer this **BeingXpert** as a gift to the community, with the hope that it will make a positive impact on people's lives.
+ - **Use, Share and Enjoy!** : So go ahead, use, share, and enjoy this **BeingXpert** without any worries or restrictions. 
 
 
 ## Credit
@@ -52,4 +52,4 @@ We offer you :
 
 For any questions or support, contact our developers team -   [Rajdev Yadav](https://www.linkedin.com/in/beingrajdevyadav/) And  [Vyshnavi Yendluri](https://www.linkedin.com/in/vyshnavi-yendluri-a21ba32b3/).
 
-Thank you for using the [BeingXpert]!
+Thank you for using the **BeingXpert**!
