@@ -15,4 +15,6 @@ const Courses = ()=>{
             <h2>Working On...</h2>
         </div>
     )
-}
+};
+
+export default Courses;
