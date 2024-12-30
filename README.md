@@ -48,8 +48,9 @@ We offer you :
 ## Credit
 
 
-## Contact
+## Team 
 
-For any questions or support, contact our developers team -   [Rajdev Yadav](https://www.linkedin.com/in/beingrajdevyadav/) And  [Vyshnavi Yendluri](https://www.linkedin.com/in/vyshnavi-yendluri-a21ba32b3/).
+   - **[Rajdev Yadav](https://www.linkedin.com/in/beingrajdevyadav/)** 
+   - **[Vyshnavi Yendluri](https://www.linkedin.com/in/beingvyshnavi-yendluri/)**
 
 Thank you for using the **BeingXpert**!
