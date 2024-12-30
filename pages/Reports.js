@@ -2,7 +2,7 @@ const Reports = ()=>{
     return (
         <div>
             <h1>Reports</h1>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzspy0YHEg3C1i3fGtQM6sBHpo4oLdDttPGQFW9JFN6wQP1czup34UO_5yBl4Vn59s-Yk&usqp=CAU" alt="working"/>
+            <img src="https://cdn.dribbble.com/users/1079204/screenshots/15845625/media/a8f2ea854fc402d02f54c7fb35b83c93.gif" alt="working"/>
             <p>Here are the reports we offer</p>
             <h2>Available Reports</h2>
             <ul>
