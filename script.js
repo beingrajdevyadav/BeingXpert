@@ -1,3 +1,5 @@
+import App from "./App.js";
+
 // ------------------------------- Navbar functionality -------------------------------
 
 const navLinks = document.querySelectorAll('.nav-link');
@@ -15,9 +17,12 @@ navLinks.forEach(link => {
 
         // this will render the UI based on the clicked link
         
-        Render(Home(link.getAttribute("name")));
+        // App(link.getAttribute("name"));
+        // Render(Home(link.getAttribute("name")));
+        Render(App(link.getAttribute("name")));
     });
 })
+
 
 
 // ------------------------------- UI render functionality -------------------------------
@@ -43,3 +48,4 @@ const Home = (title) => {
 };
 
 Render(Home("Home"));
+
