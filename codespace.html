@@ -21,347 +21,413 @@
             padding: 0;
             box-sizing: border-box;
             font-family: "Poppins", serif;
-            
-            
-
         }
+
         body {
             background-color: #fff;
             color: #555;
-            margin-left:40%;
-            margin-top:2%;
-            
+
         }
 
         /* Start CSS Coding Here */
-          
+        .q-a-nav-links {
+            display: flex;
+            justify-content: start;
+            list-style: none;
+            background-color: #3E5879;
+            color: #ddd;
+            padding: .5rem;
+            margin: .5rem;
+        }
+
+        .q-a-nav-links li {
+            padding: 10px;
+            font-size: 14px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            margin: 0 .5rem;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        .q-a-nav-links li:hover {
+            background-color: #213555;
+            color: #ddd;
+        }
+
+        .q-a-nav-links li.active {
+            background-color: #213555;
+            color: #ddd;
+        }
+
+        .q-a-nav-links li i {
+            margin-right: .25rem;
+            transition: all .3s ease;
+        }
+
         /*book form*/
-            
-        #book-form{
-            color:white;
-            display:table;
-            padding:15px;
-            background-color:rgb(90, 90, 150);
-            border:solid 5px rgb(155, 145, 145);
-            width:300px;
-            height:200%;
+
+        .quick-actions-form {
+            color: white;
+            display: table;
+            padding: 15px;
+            background-color: rgb(90, 90, 150);
+            border: solid 5px rgb(155, 145, 145);
+            width: 300px;
+            height: 200%;
             border-style: hidden;
             border-radius: 25px;
         }
-        #book-form input{
 
-            padding:5px;
+        #book-form input {
+
+            padding: 5px;
             margin-top: 15px;
         }
-        .row{
-            display:table-row;
-            padding:5px;
+
+        .row {
+            display: table-row;
+            padding: 5px;
 
         }
-        .row label{
-            display:table-row;
-            padding:5px;
+
+        .row label {
+            display: table-row;
+            padding: 5px;
             text-align: center;
 
         }
-        .rowinput{
-            display:table-row;
-            padding:5px;
+
+        .rowinput {
+            display: table-row;
+            padding: 5px;
         }
 
         /*course form */
 
-        .course-form{
-            color:white;
-            display:table;
-            padding:15px;
-            border:hidden;
+        .course-form {
+            color: white;
+            display: table;
+            padding: 15px;
+            border: hidden;
         }
-        .course-form h1{
-            color:black;
+
+        .course-form h1 {
+            color: black;
             text-align: center;
 
         }
-        .row2{
-            display:table-row;
-            padding:5px;
-        
+
+        .row2 {
+            display: table-row;
+            padding: 5px;
+
         }
-        .row2 label{
-            display:table-row;
-            padding:5px;
+
+        .row2 label {
+            display: table-row;
+            padding: 5px;
             text-align: center;
         }
-        .row2 input{
-            display:table-row;
-            padding:5px;
+
+        .row2 input {
+            display: table-row;
+            padding: 5px;
         }
 
         /*student form*/
 
-        .stu-form{
-            color:white;
-            display:table;
-            padding:45px;
-            background-color:pink;
-            border:hidden;
+        .stu-form {
+            color: white;
+            display: table;
+            padding: 45px;
+            background-color: pink;
+            border: hidden;
             border-radius: 10px;
 
         }
-        .row3{
-            display:table-row;
-            padding:5px;
+
+        .row3 {
+            display: table-row;
+            padding: 5px;
 
         }
-        .stu-form h1{
-            color:black;
-            margin-bottom:25px;
+
+        .stu-form h1 {
+            color: black;
+            margin-bottom: 25px;
         }
-        .row3 label{
-            display:table-row;
-            padding:5px;
+
+        .row3 label {
+            display: table-row;
+            padding: 5px;
             text-align: center;
-            color:black;
+            color: black;
         }
-        .row3 input{
-            display:table-row;
-            padding:5px;
+
+        .row3 input {
+            display: table-row;
+            padding: 5px;
         }
-        
+
         /* Start CSS Coding Here */
-            
-            
-      
-        
-
-        
-
-      
-        
     </style>
 </head>
 
 <body>
     <!-- Start HTML Coding Here -->
-     <!--book form section-->
-     <div class="book-form">
-        <h1>BOOK FORM </h1>
-        <form id="book-form" action="" method="">
+    <!--book form section-->
+    <div id="quickActions">
+
+        <!-- Quick Actions Navbar -->
+        <ul class="q-a-nav-links">
+            <li name="AddBook" class="q-a-nav-link active"><i class="fa-solid fa-plus"></i> Book</li>
+            <li name="AddCourse" class="q-a-nav-link"><i class="fa-solid fa-plus"></i> Course</li>
+            <li name="AddStudent" class="q-a-nav-link"><i class="fa-solid fa-plus"></i> Student</li>
+        </ul>
+
+        <!-- Add Book Form -->
+
+    </div>
+
+    <!--book form section-->
+    <section id="AddBookSection" >
+        <div class="add-book-title">
+            <h2>Add New Book</h2>
+            <hr>
+        </div>
+        
+
+        <form id="book-form" class="quick-actions-form">
             <!--title-->
             <div class="row">
-          <label for="title"> TITLE</label>      
-         <input type="text" value="" size="15" maxsize="20">
-         </div>
-         <!--author-->
-         <div class="row">
-          <label for="author">AUTHOR</label>  
-       
-        <input type="text" value="" sixe="15" maxsize="20">
-        </div>
-        <!--isbn-->
-        <div class="row">
-            <label for="isbn">ISBN</label>
+                <label for="title"> TITLE</label>
+                <input type="text" value="" size="15" maxsize="20">
+            </div>
+            <!--author-->
+            <div class="row">
+                <label for="author">AUTHOR</label>
 
-        <input type="text" value="">
-        </div>
-        <!--publisher-->
-        <div class="row">
-            <label for="publisher">PUBLISHER</label>
+                <input type="text" value="" sixe="15" maxsize="20">
+            </div>
+            <!--isbn-->
+            <div class="row">
+                <label for="isbn">ISBN</label>
 
-       
-        <input type="text" value="">
-        </div>
-        <!--publication-->
-        <div class="row">
-            <label for="date">PUBlLICATION</label>
-       
-        <input type="date" value="">
-        </div>
-        <!--generation-->
-        <div class="row">
+                <input type="text" value="">
+            </div>
+            <!--publisher-->
+            <div class="row">
+                <label for="publisher">PUBLISHER</label>
 
-            <label for="generation">GENERATION</label>
-       
-        <input type="text" value="">
-        </div>
-        <!--page number-->
-        <div class="row">
 
-        <label for="number">PAGE NUMBER</label>
-        
-        <input type ="number" value="">
-        </div>
-        <!--language-->
-        <div class="row">
+                <input type="text" value="">
+            </div>
+            <!--publication-->
+            <div class="row">
+                <label for="date">PUBlLICATION</label>
 
-            <label for="language">LANGUAGE</label>
-        
-        <input type="text" value="">
-        </div>
-        <!--description area-->
-        <br>
-        <textarea rows="5" columns="10">description</textarea>
-        
+                <input type="date" value="">
+            </div>
+            <!--generation-->
+            <div class="row">
+
+                <label for="generation">GENERATION</label>
+
+                <input type="text" value="">
+            </div>
+            <!--page number-->
+            <div class="row">
+
+                <label for="number">PAGE NUMBER</label>
+
+                <input type="number" value="">
+            </div>
+            <!--language-->
+            <div class="row">
+
+                <label for="language">LANGUAGE</label>
+
+                <input type="text" value="">
+            </div>
+            <!--description area-->
+            <br>
+            <textarea rows="5" columns="10">description</textarea>
+
         </form>
 
-     </div>
+    </section>
 
 
 
 
-     <!--course form section-->
+    <!--course form section-->
     <section class="course-form">
-            <h1>COURSE FORM</h1>
-                <div class="course-form">
+        <h1>COURSE FORM</h1>
+        <div class="course-form">
 
-                    <form id="book-form" action="" method="">
-                        <!--course name-->
-                        <div class="row2">
-                      <label for="course name">COURSE</label>      
-                     <input type="text" value="" size="15" maxsize="20">
-                     </div>
-                     <!--course code-->
-                     <div class="row2">
-                      <label for="course code">COURSE CODE</label>  
-                   
+            <form id="book-form" action="" method="">
+                <!--course name-->
+                <div class="row2">
+                    <label for="course name">COURSE</label>
                     <input type="text" value="" size="15" maxsize="20">
-                    </div>
-                    <!--instructor-->
-                    <div class="row2">
-                        <label for="instructor">INSTRUCTOR</label>
-                        <input type="text" value="">
-                        </div>
-            
+                </div>
+                <!--course code-->
+                <div class="row2">
+                    <label for="course code">COURSE CODE</label>
 
-                    <!--duration-->
-                    <div class="row2">
-                        <label for="duration">DURATION</label>
-            
-                   
+                    <input type="text" value="" size="15" maxsize="20">
+                </div>
+                <!--instructor-->
+                <div class="row2">
+                    <label for="instructor">INSTRUCTOR</label>
+                    <input type="text" value="">
+                </div>
+
+
+                <!--duration-->
+                <div class="row2">
+                    <label for="duration">DURATION</label>
+
+
                     <input type="number" value="">
-                    </div>
-                    <!--start date-->
-                    <div class="row2">
-                        <label for="start date">START DATE</label>
-                   
+                </div>
+                <!--start date-->
+                <div class="row2">
+                    <label for="start date">START DATE</label>
+
                     <input type="date" value="">
-                    </div>
-                    <!--end-date-->
-                    <div class="row2">
-            
-                        <label for="end date">END DATE</label>
-                   
+                </div>
+                <!--end-date-->
+                <div class="row2">
+
+                    <label for="end date">END DATE</label>
+
                     <input type="date" value="">
-                    </div>
-                    <!--credits-->
-                    <div class="row2">
-            
+                </div>
+                <!--credits-->
+                <div class="row2">
+
                     <label for="credits">CREDITS</label>
-                    
-                    <input type ="number" value="">
-                    </div>
-                    <!--description-->
-                    <div class="row2">
-            
-                        <label for="description">DESCRIPTION</label>
-                    
+
+                    <input type="number" value="">
+                </div>
+                <!--description-->
+                <div class="row2">
+
+                    <label for="description">DESCRIPTION</label>
+
                     <input type="text area" value="">
-                    </div>
-                </div>    
-          
-                
-            </form>
-            
+                </div>
         </div>
-     </section>
 
-           <!--student form section-->
 
-     <section class="student-form">
+        </form>
+
+        </div>
+    </section>
+
+    <!--student form section-->
+
+    <section class="student-form">
         <div class="stu-form">
-        <form id="student-form" action="" method=""></form>
+            <form id="student-form" action="" method=""></form>
 
             <h1>STUDENT FORM</h1>
-    
-                        <!--first name-->
-        <div class="row3">
-        <label for="first name">FIRST NAME</label>      
-            <input type="text" value="" size="15" maxsize="20">
-                </div>
+
+            <!--first name-->
+            <div class="row3">
+                <label for="first name">FIRST NAME</label>
+                <input type="text" value="" size="15" maxsize="20">
+            </div>
             <!--last name-->
-                 <div class="row3">
-                    <label for="last name">LAST NAME</label>  
-                   
-                 <input type="text" value="" size="15" maxsize="20">
-                </div>
-                    <!--student id-->
-                    <div class="row3">
-                        <label for="studentid">STUDENT ID</label>
+            <div class="row3">
+                <label for="last name">LAST NAME</label>
 
-                    <input type="text" value=""> 
-                    </div>       
+                <input type="text" value="" size="15" maxsize="20">
+            </div>
+            <!--student id-->
+            <div class="row3">
+                <label for="studentid">STUDENT ID</label>
 
-                    <!--date of birth-->
-                    <div class="row3">
-                        <label for="date of birth">DATE OF BIRTH</label>
-            
-                    <input type="date" value="">
-                    </div>
-                    <!--e-mail-->
-                    <div class="row3">
-                        <label for="e-mail">E-MAIL</label>
-                   
-                    <input type="email" value="">
-                    </div>
-                    <!--phone number-->
-                    <div class="row3">
-            
-                        <label for="phone number">PHONE NUMBER</label>
-                   
-                    <input type="tel" value="">
-                    </div>
-                    <!--address-->
-                    <div class="row3">
-            
-                    <label for="address">ADDRESS</label>
-                    
-                    <input type ="text area" value="">
-                    </div>
-                    <!--enrollment path-->
-                    <div class="row3">
-            
-                        <label for="enrollment path">ENROLLMENT PATH</label>
-                    
-                    <input type="date" value="">
-                    </div>
-                    <!--major-->
-                    <div class="row3">
-                        <label for="major">MAJOR</label>
-                        <input type="text" value="">
+                <input type="text" value="">
+            </div>
 
-                    </div>
-                    <!--gpa-->
-                    <div class="row3">
-                        <label for="gpa">GPA</label>
-                        <input type="number" value="">
-                    </div>
-                    
-                </div>    
-          
-            </form>
-            
+            <!--date of birth-->
+            <div class="row3">
+                <label for="date of birth">DATE OF BIRTH</label>
+
+                <input type="date" value="">
+            </div>
+            <!--e-mail-->
+            <div class="row3">
+                <label for="e-mail">E-MAIL</label>
+
+                <input type="email" value="">
+            </div>
+            <!--phone number-->
+            <div class="row3">
+
+                <label for="phone number">PHONE NUMBER</label>
+
+                <input type="tel" value="">
+            </div>
+            <!--address-->
+            <div class="row3">
+
+                <label for="address">ADDRESS</label>
+
+                <input type="text area" value="">
+            </div>
+            <!--enrollment path-->
+            <div class="row3">
+
+                <label for="enrollment path">ENROLLMENT PATH</label>
+
+                <input type="date" value="">
+            </div>
+            <!--major-->
+            <div class="row3">
+                <label for="major">MAJOR</label>
+                <input type="text" value="">
+
+            </div>
+            <!--gpa-->
+            <div class="row3">
+                <label for="gpa">GPA</label>
+                <input type="number" value="">
+            </div>
+
         </div>
-     </section>
+
+        </form>
+
+        </div>
+    </section>
 
 
 
-    <!-- Write JavaScript Code Here  -->
-   
+
+
 
 
 
     <!-- Write JavaScript Code Here  -->
     <script>
+        // quick actions navlinks selection
+        const QuickActionsNavLinks = document.querySelectorAll(".q-a-nav-link");
+        // console.log(QuickActionsNavLinks);
+        QuickActionsNavLinks.forEach(link => {
+            link.addEventListener("click", () => {
+
+                QuickActionsNavLinks.forEach(link => {
+                    link.classList.remove("active");
+                });
+                link.classList.add("active");
+            });
+
+        });
 
 
     </script>
