@@ -21,24 +21,348 @@
             padding: 0;
             box-sizing: border-box;
             font-family: "Poppins", serif;
+            
+            
 
         }
         body {
             background-color: #fff;
             color: #555;
+            margin-left:40%;
+            margin-top:2%;
+            
+        }
+
+        /* Start CSS Coding Here */
+          
+        /*book form*/
+            
+        #book-form{
+            color:white;
+            display:table;
+            padding:15px;
+            background-color:rgb(90, 90, 150);
+            border:solid 5px rgb(155, 145, 145);
+            width:300px;
+            height:200%;
+            border-style: hidden;
+            border-radius: 25px;
+        }
+        #book-form input{
+
+            padding:5px;
+            margin-top: 15px;
+        }
+        .row{
+            display:table-row;
+            padding:5px;
 
         }
+        .row label{
+            display:table-row;
+            padding:5px;
+            text-align: center;
+
+        }
+        .rowinput{
+            display:table-row;
+            padding:5px;
+        }
+
+        /*course form */
+
+        .course-form{
+            color:white;
+            display:table;
+            padding:15px;
+            border:hidden;
+        }
+        .course-form h1{
+            color:black;
+            text-align: center;
+
+        }
+        .row2{
+            display:table-row;
+            padding:5px;
+        
+        }
+        .row2 label{
+            display:table-row;
+            padding:5px;
+            text-align: center;
+        }
+        .row2 input{
+            display:table-row;
+            padding:5px;
+        }
+
+        /*student form*/
+
+        .stu-form{
+            color:white;
+            display:table;
+            padding:45px;
+            background-color:pink;
+            border:hidden;
+            border-radius: 10px;
+
+        }
+        .row3{
+            display:table-row;
+            padding:5px;
+
+        }
+        .stu-form h1{
+            color:black;
+            margin-bottom:25px;
+        }
+        .row3 label{
+            display:table-row;
+            padding:5px;
+            text-align: center;
+            color:black;
+        }
+        .row3 input{
+            display:table-row;
+            padding:5px;
+        }
+        
         /* Start CSS Coding Here */
+            
+            
+      
+        
+
+        
+
+      
         
     </style>
 </head>
 
 <body>
     <!-- Start HTML Coding Here -->
+     <!--book form section-->
+     <div class="book-form">
+        <h1>BOOK FORM </h1>
+        <form id="book-form" action="" method="">
+            <!--title-->
+            <div class="row">
+          <label for="title"> TITLE</label>      
+         <input type="text" value="" size="15" maxsize="20">
+         </div>
+         <!--author-->
+         <div class="row">
+          <label for="author">AUTHOR</label>  
+       
+        <input type="text" value="" sixe="15" maxsize="20">
+        </div>
+        <!--isbn-->
+        <div class="row">
+            <label for="isbn">ISBN</label>
+
+        <input type="text" value="">
+        </div>
+        <!--publisher-->
+        <div class="row">
+            <label for="publisher">PUBLISHER</label>
+
+       
+        <input type="text" value="">
+        </div>
+        <!--publication-->
+        <div class="row">
+            <label for="date">PUBlLICATION</label>
+       
+        <input type="date" value="">
+        </div>
+        <!--generation-->
+        <div class="row">
+
+            <label for="generation">GENERATION</label>
+       
+        <input type="text" value="">
+        </div>
+        <!--page number-->
+        <div class="row">
+
+        <label for="number">PAGE NUMBER</label>
+        
+        <input type ="number" value="">
+        </div>
+        <!--language-->
+        <div class="row">
+
+            <label for="language">LANGUAGE</label>
+        
+        <input type="text" value="">
+        </div>
+        <!--description area-->
+        <br>
+        <textarea rows="5" columns="10">description</textarea>
+        
+        </form>
+
+     </div>
+
+
+
+
+     <!--course form section-->
+    <section class="course-form">
+            <h1>COURSE FORM</h1>
+                <div class="course-form">
+
+                    <form id="book-form" action="" method="">
+                        <!--course name-->
+                        <div class="row2">
+                      <label for="course name">COURSE</label>      
+                     <input type="text" value="" size="15" maxsize="20">
+                     </div>
+                     <!--course code-->
+                     <div class="row2">
+                      <label for="course code">COURSE CODE</label>  
+                   
+                    <input type="text" value="" size="15" maxsize="20">
+                    </div>
+                    <!--instructor-->
+                    <div class="row2">
+                        <label for="instructor">INSTRUCTOR</label>
+                        <input type="text" value="">
+                        </div>
+            
+
+                    <!--duration-->
+                    <div class="row2">
+                        <label for="duration">DURATION</label>
+            
+                   
+                    <input type="number" value="">
+                    </div>
+                    <!--start date-->
+                    <div class="row2">
+                        <label for="start date">START DATE</label>
+                   
+                    <input type="date" value="">
+                    </div>
+                    <!--end-date-->
+                    <div class="row2">
+            
+                        <label for="end date">END DATE</label>
+                   
+                    <input type="date" value="">
+                    </div>
+                    <!--credits-->
+                    <div class="row2">
+            
+                    <label for="credits">CREDITS</label>
+                    
+                    <input type ="number" value="">
+                    </div>
+                    <!--description-->
+                    <div class="row2">
+            
+                        <label for="description">DESCRIPTION</label>
+                    
+                    <input type="text area" value="">
+                    </div>
+                </div>    
+          
+                
+            </form>
+            
+        </div>
+     </section>
+
+           <!--student form section-->
+
+     <section class="student-form">
+        <div class="stu-form">
+        <form id="student-form" action="" method=""></form>
+
+            <h1>STUDENT FORM</h1>
+    
+                        <!--first name-->
+        <div class="row3">
+        <label for="first name">FIRST NAME</label>      
+            <input type="text" value="" size="15" maxsize="20">
+                </div>
+            <!--last name-->
+                 <div class="row3">
+                    <label for="last name">LAST NAME</label>  
+                   
+                 <input type="text" value="" size="15" maxsize="20">
+                </div>
+                    <!--student id-->
+                    <div class="row3">
+                        <label for="studentid">STUDENT ID</label>
+
+                    <input type="text" value=""> 
+                    </div>       
+
+                    <!--date of birth-->
+                    <div class="row3">
+                        <label for="date of birth">DATE OF BIRTH</label>
+            
+                    <input type="date" value="">
+                    </div>
+                    <!--e-mail-->
+                    <div class="row3">
+                        <label for="e-mail">E-MAIL</label>
+                   
+                    <input type="email" value="">
+                    </div>
+                    <!--phone number-->
+                    <div class="row3">
+            
+                        <label for="phone number">PHONE NUMBER</label>
+                   
+                    <input type="tel" value="">
+                    </div>
+                    <!--address-->
+                    <div class="row3">
+            
+                    <label for="address">ADDRESS</label>
+                    
+                    <input type ="text area" value="">
+                    </div>
+                    <!--enrollment path-->
+                    <div class="row3">
+            
+                        <label for="enrollment path">ENROLLMENT PATH</label>
+                    
+                    <input type="date" value="">
+                    </div>
+                    <!--major-->
+                    <div class="row3">
+                        <label for="major">MAJOR</label>
+                        <input type="text" value="">
+
+                    </div>
+                    <!--gpa-->
+                    <div class="row3">
+                        <label for="gpa">GPA</label>
+                        <input type="number" value="">
+                    </div>
+                    
+                </div>    
+          
+            </form>
+            
+        </div>
+     </section>
+
+
+
+    <!-- Write JavaScript Code Here  -->
+   
+
 
 
     <!-- Write JavaScript Code Here  -->
     <script>
+
 
     </script>
 </body>
