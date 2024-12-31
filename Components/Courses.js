@@ -1,5 +1,6 @@
 const Courses = ()=>{
     return(
+        `
         <div>
             <h1>Courses</h1>
             <img src="https://cdn.dribbble.com/users/3573566/screenshots/14509732/media/00ed4da4b643e67738a3ab402df90a24.gif" alt="working"/>
@@ -14,7 +15,7 @@ const Courses = ()=>{
 
             <h2>Working On...</h2>
         </div>
-    )
+    `)
 };
 
 export default Courses;

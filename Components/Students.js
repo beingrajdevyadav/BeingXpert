@@ -1,7 +1,7 @@
 const Students = ()=>{
 
     return (
-
+`
         <div>
             <h1>Students</h1>
             <img src="https://media2.giphy.com/media/WRirZDh1EYZl31NcK2/giphy.gif?cid=6c09b952cfrzscc1l2ihm7t3onncqwizxurghbmj05y156mz&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="working"/>
@@ -14,7 +14,7 @@ const Students = ()=>{
                 <li>Student 4</li>  
             </ul>
             <h2>Working On...</h2>
-        </div>
+        </div>`
     )
 };
 
