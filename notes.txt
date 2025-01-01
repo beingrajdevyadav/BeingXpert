@@ -34,3 +34,50 @@
 9. Major - Text
 10. GPA - Number
 ---------------------------------------
+
+>>>>>>>>>>> 01/01/2025 >>>>>>>
+ ⚠️##Use Arror Functions##
+1. Write a addBookFunction to handle with Add Book Form
+2. Function should print all input value in console as submit form (click on add book button);
+
+result example : 
+{
+    bookTitle : "Core JavaScript",
+    bookAuthor : "mr. xyz",
+    bookISBN : "abcde",
+    bookPublisher: "xyz publication",
+    bookPublicationDate: "01/01/2025",
+    bookGenre : "sdfsdf",
+    bookPages: 210,
+    bookLanguage: "English",
+    bookDescription: "this is core javascript book."
+}
+
+3. Use - e.preventDefault() - to stop html form basic behaviors
+
+4. Try to create an Array of objects - (an array that holds many objects)
+
+example : const bookList = [{}, {},{},{}...]
+
+5. Try to store form date in localStorage();
+
+👉📖#cheatsheet
+const addBookFormHandler = ()=>{
+    e.preventDefault();
+    let bookTitleTag = document.getElementById("form-book-title);
+
+    #object sample
+
+    const book = {
+        bookTitle = bookTitleTag.value;
+    }
+
+    console.log(book);
+
+
+#for array of objects
+    const bookList = [];
+    bookList.push(book);
+}
+
+that's enough hint 😅
