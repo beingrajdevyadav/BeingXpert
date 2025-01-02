@@ -81,3 +81,26 @@ const addBookFormHandler = ()=>{
 }
 
 that's enough hint 😅
+
+>>>>>>>>>>> 📆 02/01/2025 >>>>>>>
+
+🎯 Today's Task
+
+1. Prepare JavaScript Basics
+ - var, let, const
+ - data types
+ - string and string methods
+ - javaScript template strings
+2. Re-Prepare ES6 JavaScript Concepts
+ 
+ 🔰 Note : Make hand written notes so that whenever you forget, you just see and remind all. 
+
+
+ ✨ Quote Of Today - “The only person who can pull me down is myself, and I'm not going to let myself pull me down anymore.”—C. JoyBell C.
+
+ A message 🎀: Please, don't worry and down think like - "why is he giving such tasks?, I'm giving because we will work with these javaScript Concepts and, I cannot tell you all topics at once. 😌 
+ Just break whole into pieces and complete it one by one whole important topics. 
+
+ Please, take care and be safe. Do it with proper rest and time gap, Don't try to complete all at once. 
+ Best of luck! 🎯
+ Happy Coding! 👨‍💻🙌
