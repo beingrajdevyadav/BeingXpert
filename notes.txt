@@ -104,3 +104,82 @@ that's enough hint 😅
  Please, take care and be safe. Do it with proper rest and time gap, Don't try to complete all at once. 
  Best of luck! 🎯
  Happy Coding! 👨‍💻🙌
+
+>>>>>>>>>>> 📆 03/01/2025 >>>>>>>
+
+🎯 Today's Task
+
+ 1. Prepare JavaScript Local Storage
+ - what's?
+ - why to use?
+ - its methods
+ - write your own hand notes
+
+2. Re-Prepare ES6 Arrow Function Concepts
+- Our Pages will be returned by using Arrow Function
+- prepare arrow functions well
+
+3. Write these programs using Arrow Function
+Here are 5 practice programs for beginners using arrow functions in JavaScript:
+
+Program 1: Simple Arrow Function
+
+Create an arrow function that takes a name as an argument and returns a greeting message.
+
+
+const greet = (name) => {
+  return `Hello, ${name}!`;
+};
+
+console.log(greet("John")); // Output: Hello, John!
+
+
+Program 2: Arrow Function with Multiple Arguments
+
+Create an arrow function that takes two numbers as arguments and returns their sum.
+
+
+const addNumbers = (num1, num2) => {
+  return num1 + num2;
+};
+
+console.log(addNumbers(5, 7)); // Output: 12
+
+
+Program 3: Arrow Function with Array Methods
+
+Create an arrow function that takes an array of numbers and returns their average.
+
+
+const calculateAverage = (numbers) => {
+  return numbers.reduce((sum, num) => sum + num, 0) / numbers.length;
+};
+
+const numbers = [10, 20, 30, 40, 50];
+console.log(calculateAverage(numbers)); // Output: 30
+
+
+Program 4: Arrow Function with Object Methods
+
+Create an arrow function that takes an object with name and age properties and returns a string describing the person.
+
+
+const describePerson = (person) => {
+  return `${person.name} is ${person.age} years old.`;
+};
+
+const person = { name: "Jane", age: 25 };
+console.log(describePerson(person)); // Output: Jane is 25 years old.
+
+
+Program 5: Arrow Function with Conditional Statements
+
+Create an arrow function that takes a number as an argument and returns a string indicating whether the number is even or odd.
+
+
+const isEvenOrOdd = (num) => {
+  return num % 2 === 0 ? "Even" : "Odd";
+};
+
+console.log(isEvenOrOdd(10)); // Output: Even
+console.log(isEvenOrOdd(11)); // Output: Odd
