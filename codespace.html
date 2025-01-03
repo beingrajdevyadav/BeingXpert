@@ -81,14 +81,19 @@
             border: 1px solid #ddd;
             box-shadow: 0 2px 5px 0 #00000052;
             margin: 2rem auto;
+            /* display: none; */
         }
+
+        /* .quick-actions-form.active-form {
+            display: block;
+        } */
 
         .quick-actions-form:hover {
             box-shadow: 0 5px 10px 0 #00000052;
 
         }
 
-        .add-book-title {
+        .add-form-title {
             text-align: start;
             margin-bottom: 1rem;
         }
@@ -165,7 +170,11 @@
         .book-form-btns button:hover {
             background-color: #213555;
         }
- 
+
+        .crs-frm,
+        .std-frm {
+            display: none;
+        }
 
         /* Start CSS Coding Here */
     </style>
@@ -183,17 +192,14 @@
             <li name="AddStudentSection" class="q-a-nav-link"><i class="fa-solid fa-plus"></i> Student</li>
         </ul>
 
-        
+
         <!--book form section-->
-        <section class="qa-form-container" id="AddBookSection">
-            <div class="add-book-title">
-                <h2>New Book Form</h2>
-                <hr>
-            </div>
-
-
+        <section class="qa-form-container active-form" id="AddBookSection">
             <form id="book-form" class="quick-actions-form">
-
+                <div class="add-form-title">
+                    <h2>New Book Form</h2>
+                    <hr>
+                </div>
                 <div class="form-controls-wrapper">
                     <!--book title-->
                     <div class="form-controls">
@@ -248,7 +254,7 @@
                     <!--description area-->
                     <div class="form-controls">
                         <label for="form-book-description"><i class="fa-solid fa-hashtag"></i> Book Description</label>
-                        <textarea id="form-book-description" name="form-book-description" rows="5"
+                        <textarea id="form-book-description" name="form-book-description"
                             placeholder="Enter Book Description"></textarea>
                     </div>
                 </div>
@@ -264,13 +270,16 @@
         </section>
 
         <!--course form section-->
-        <section class="qa-form-container"  id="AddCourseForm">
-            <div class="add-course-title">
-                <h2>Add Course Form</h2>
-                <hr>
-            </div>
+        <section class="qa-form-container crs-frm" id="AddCourseSection">
+
 
             <form id="course-form" class="quick-actions-form">
+
+                <div class="add-form-title">
+                    <h2>Add Course Form</h2>
+                    <hr>
+                </div>
+
                 <div class="form-controls-wrapper">
                     <!--course name-->
                     <div class="form-controls">
@@ -340,10 +349,10 @@
 
         <!--student form section-->
 
-        <section class="qa-form-container" class="AddStudentSection">
+        <section class="qa-form-container std-frm" id="AddStudentSection">
 
-            <form id="student-form" class="quick-actions-form">
-                <div class="add-student-title">
+            <form id="add-student-form" class="quick-actions-form">
+                <div class="add-form-title">
                     <h2>Add Student Form</h2>
                     <hr>
                 </div>
@@ -440,6 +449,7 @@
     <script>
         // quick actions navlinks selection
         const QuickActionsNavLinks = document.querySelectorAll(".q-a-nav-link");
+        const QuickActionsForms = document.querySelectorAll(".qa-form-container");
         // console.log(QuickActionsNavLinks);
         QuickActionsNavLinks.forEach(link => {
             link.addEventListener("click", () => {
@@ -447,9 +457,13 @@
                     link.classList.remove("active");
                 });
                 link.classList.add("active");
-                // const sectionId = link.getAttribute("name");
-                // console.log(sectionId);
 
+                // to hide others form
+                QuickActionsForms.forEach(form => {
+                    form.style.display = "none";
+                });
+                // to show current form
+                document.getElementById(`${link.getAttribute("name")}`).style.display = "block";
             });
 
         });
