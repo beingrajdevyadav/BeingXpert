@@ -24,7 +24,7 @@
         }
 
         body {
-            background-color: #fff;
+            background-color: #f1f1f1;
             color: #555;
 
         }
@@ -138,14 +138,14 @@
         .form-controls input {
             width: 100%;
             padding: 10px;
-            /* margin-top: 15px; */
+            color: #444;
         }
 
         .form-controls textarea {
             width: 100%;
             padding: 10px;
             resize: none;
-            /* margin-top: 15px; */
+            color: #444;
         }
 
         .book-form-btns {
@@ -176,6 +176,19 @@
             display: none;
         }
 
+
+        /* Media Queries  */
+        @media screen and (max-width: 768px) {
+            #quickActions {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .form-controls {
+                width: 100%;
+            }
+        }
+
         /* Start CSS Coding Here */
     </style>
 </head>
@@ -204,24 +217,23 @@
                     <!--book title-->
                     <div class="form-controls">
                         <label for="form-book-title"><i class="fa-solid fa-pen-nib"></i> Book Title</label>
-                        <input type="text" name="form-book-title" id="form-book-title" placeholder="Enter Book Title ">
+                        <input type="text" name="formBookTitle" id="form-book-title" placeholder="Enter Book Title ">
                     </div>
 
                     <!--book author-->
                     <div class="form-controls">
                         <label for="form-book-author"><i class="fa-solid fa-at"></i> Book Author</label>
-                        <input type="text" name="form-book-author" id="form-book-author"
-                            placeholder="Enter Author Name">
+                        <input type="text" name="formBookAuthor" id="form-book-author" placeholder="Enter Author Name">
                     </div>
                     <!--isbn-->
                     <div class="form-controls">
                         <label for="form-book-isbn"><i class="fa-solid fa-barcode"></i> Book ISBN </label>
-                        <input type="text" name="form-book-isbn" id="form-book-isbn" placeholder="Enter ISBN">
+                        <input type="text" name="formBookIsbn" id="form-book-isbn" placeholder="Enter ISBN">
                     </div>
                     <!--publisher-->
                     <div class="form-controls">
                         <label for="form-book-publisher"> <i class="fa-solid fa-print"></i> Book Publisher</label>
-                        <input type="text" name="form-book-publisher" id="form-book-publisher"
+                        <input type="text" name="formBookPublisher" id="form-book-publisher"
                             placeholder="Enter Publisher Name">
                     </div>
                     <!--publication-->
@@ -229,32 +241,31 @@
                         <label for="form-book-publication-date"><i class="fa-solid fa-calendar-days"></i> Book
                             Publication
                             Date</label>
-                        <input type="date" name="form-book-publication-date" id="form-book-publication-date">
+                        <input type="date" name="formBookPublicationDate" id="form-book-publication-date">
                     </div>
                     <!--generation-->
                     <div class="form-controls">
                         <label for="form-book-generation"><i class="fa-solid fa-calendar-check"></i> Book
                             Generation</label>
-                        <input type="text" name="form-book-generation" id="form-book-generation"
+                        <input type="text" name="formBookGeneration" id="form-book-generation"
                             placeholder="Enter Book Generation">
                     </div>
                     <!--page number-->
                     <div class="form-controls">
                         <label for="form-book-number"><i class="fa-solid fa-file-lines"></i> Book Pages </label>
-                        <input type="number" name="form-book-number" id="form-book-number"
-                            placeholder="Enter Book Pages">
+                        <input type="number" name="formBookPages" id="form-book-pages" placeholder="Enter Book Pages">
                     </div>
                     <!--language-->
                     <div class="form-controls">
                         <label for="form-book-language"><i class="fa-solid fa-language"></i> Book Language</label>
-                        <input type="text" name="form-book-language" id="form-book-language"
-                            placeholder="Enter Book Language">
+                        <input type="text" name="formBookLanguage" id="form-book-language"
+                            placeholder="Enter Book Language"/>
                     </div>
 
                     <!--description area-->
                     <div class="form-controls">
                         <label for="form-book-description"><i class="fa-solid fa-hashtag"></i> Book Description</label>
-                        <textarea id="form-book-description" name="form-book-description"
+                        <textarea id="form-book-description" name="formBookDescription"
                             placeholder="Enter Book Description"></textarea>
                     </div>
                 </div>
@@ -447,7 +458,10 @@
 
     <!-- Write JavaScript Code Here  -->
     <script>
-        // quick actions navlinks selection
+        // -----------------------------------
+        //   quick actions navlinks selection
+        // -----------------------------------
+
         const QuickActionsNavLinks = document.querySelectorAll(".q-a-nav-link");
         const QuickActionsForms = document.querySelectorAll(".qa-form-container");
         // console.log(QuickActionsNavLinks);
@@ -467,7 +481,47 @@
             });
 
         });
+        // ------------------------------------------------
 
+        const AddBookForm = document.getElementById("book-form");
+        const AddCourseForm = document.getElementById("course-form");
+        const AddStudentForm = document.getElementById("add-student-form");
+
+        // Add Book Form Submit Event
+        AddBookForm.addEventListener("submit", function (e) {
+            // to avoid form default page reload feature
+            e.preventDefault();
+            console.log("Book Form Submitted");
+
+            // to collect form data
+            const currentBook = {
+                bookTitle: this.formBookTitle.value,
+                bookAuthor: this.formBookAuthor.value,
+                bookISBN: this.formBookIsbn.value,
+                bookPublisher: this.formBookPublisher.value,
+                bookPublicationDate: this.formBookPublicationDate.value,
+                bookGeneration: this.formBookGeneration.value,
+                bookPages: this.formBookPages.value,
+                bookLanguage: this.formBookLanguage.value,
+                bookDescription: this.formBookDescription.value,
+            };
+
+            console.log(currentBook);
+
+
+        });
+
+        // Add Course Form Submit Event
+        AddCourseForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log("Course Form Submitted");
+        });
+
+        // Add Student Form Submit Event
+        AddStudentForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log("Student Form Submitted");
+        });
 
     </script>
 </body>
