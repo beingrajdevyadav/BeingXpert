@@ -295,14 +295,12 @@
                     <!--course name-->
                     <div class="form-controls">
                         <label for="form-course-name"><i class="fa-solid fa-chalkboard-user"></i> Course Name</label>
-                        <input type="text" name="formCourseName" id="formCourseName"
-                            placeholder="Enter Course Name">
+                        <input type="text" name="formCourseName" id="formCourseName" placeholder="Enter Course Name">
                     </div>
                     <!--course code-->
                     <div class="form-controls">
                         <label for="form-course-code"><i class="fa-solid fa-microchip"></i> Course Code</label>
-                        <input type="text" name="formCourseCode" id="formCourseCode"
-                            placeholder="Enter Course Code">
+                        <input type="text" name="formCourseCode" id="formCourseCode" placeholder="Enter Course Code">
                     </div>
                     <!--instructor-->
                     <div class="form-controls">
@@ -532,36 +530,44 @@
 
 
         // Add Course Form Submit Event
-        AddCourseForm.addEventListener("submit", function(e){
+        AddCourseForm.addEventListener("submit", function (e) {
             e.preventDefault();
             // console.log("Course Form Submitted");
 
             // to validate form data and then process to localStorage
-            
-            const currentCourse ={
-                courseName: this.formCourseName.value,
-                courseCode: this.formCourseCode.value,
-                instructorName: this.formInstructorName.value,
-                courseDuration: this.formCourseDuration.value,
-                startDate: this.formStartDate.value,
-                endDate: this.formEndDate.value,
-                courseCredits: this.formCredits.value,
-                referralCode: this.formReferralCode.value,
-                courseDescription: this.formCourseDescription.value,
-            };
 
-            // console.log(currentCourse);
-            // to get stored courses list or if no book exists then create a empty array
+            if (this.formCourseName.value && this.formCourseCode.value && this.formInstructorName.value && this.formCourseDuration.value && this.formStartDate.value && this.formEndDate.value && this.formCredits.value && this.formReferralCode.value && this.formCourseDescription.value) {
+                console.log("Form data is valid");
 
-            const courseList = JSON.parse(localStorage.getItem("courseList")) || [];
+                // to collect form data in the form of object
+                const currentCourse = {
+                    courseName: this.formCourseName.value,
+                    courseCode: this.formCourseCode.value,
+                    instructorName: this.formInstructorName.value,
+                    courseDuration: this.formCourseDuration.value,
+                    startDate: this.formStartDate.value,
+                    endDate: this.formEndDate.value,
+                    courseCredits: this.formCredits.value,
+                    referralCode: this.formReferralCode.value,
+                    courseDescription: this.formCourseDescription.value,
+                };
 
-            // to add currentCourse in courseList
-            courseList.push(currentCourse);
+                // console.log(currentCourse);
+                // to get stored courses list or if no book exists then create a empty array
 
-            // to update localStorage data
-            localStorage.setItem("courseList", JSON.stringify(courseList));
+                const courseList = JSON.parse(localStorage.getItem("courseList")) || [];
 
-            console.log("Congratulations!!, Book Added Success.")
+                // to add currentCourse in courseList
+                courseList.push(currentCourse);
+
+                // to update localStorage data
+                localStorage.setItem("courseList", JSON.stringify(courseList));
+
+                console.log("Congratulations!!, Book Added Success.")
+            } else {
+                // when any input field is empty
+                console.log("Sorry!, All input fields are required.");
+            }
         });
 
         // Add Student Form Submit Event
