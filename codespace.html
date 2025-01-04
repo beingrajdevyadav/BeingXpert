@@ -295,56 +295,56 @@
                     <!--course name-->
                     <div class="form-controls">
                         <label for="form-course-name"><i class="fa-solid fa-chalkboard-user"></i> Course Name</label>
-                        <input type="text" name="form-course-name" id="form-course-name"
+                        <input type="text" name="formCourseName" id="formCourseName"
                             placeholder="Enter Course Name">
                     </div>
                     <!--course code-->
                     <div class="form-controls">
                         <label for="form-course-code"><i class="fa-solid fa-microchip"></i> Course Code</label>
-                        <input type="text" name="form-course-code" id="form-course-code"
+                        <input type="text" name="formCourseCode" id="formCourseCode"
                             placeholder="Enter Course Code">
                     </div>
                     <!--instructor-->
                     <div class="form-controls">
                         <label for="form-instructor-name"><i class="fa-solid fa-person-chalkboard"></i> Instructor
                             Name</label>
-                        <input type="text" id="form-instructor-name" placeholder="Enter Instructor Name"
-                            name="form-instructor-name">
+                        <input type="text" id="formInstructorName" placeholder="Enter Instructor Name"
+                            name="formInstructorName">
                     </div>
 
 
                     <!--duration-->
                     <div class="form-controls">
                         <label for="form-course-duration"><i class="fa-regular fa-clock"></i> Course Duration</label>
-                        <input type="number" id="form-course-duration" name="form-course-duration"
+                        <input type="number" id="form-course-duration" name="formCourseDuration"
                             placeholder="Enter Course Duration">
                     </div>
                     <!--start date-->
                     <div class="form-controls">
                         <label for="form-start-date"><i class="fa-regular fa-calendar-plus"></i>Start Date </label>
-                        <input type="date" id="form-start-date" name="form-start-date">
+                        <input type="date" id="form-start-date" name="formStartDate">
                     </div>
                     <!--end-date-->
                     <div class="form-controls">
                         <label for="form-end-date"><i class="fa-regular fa-calendar-check"></i> End Date</label>
-                        <input type="date" id="form-end-date" name="form-end-date">
+                        <input type="date" id="form-end-date" name="formEndDate">
                     </div>
                     <!--credits-->
                     <div class="form-controls">
                         <label for="form-credits"><i class="fa-solid fa-clock-rotate-left"></i> Course Credits</label>
-                        <input type="number" id="form-credits" name="form-credits" placeholder="Enter Course Credits">
+                        <input type="number" id="form-credits" name="formCredits" placeholder="Enter Course Credits">
                     </div>
                     <!--credits-->
                     <div class="form-controls">
                         <label for="form-referral-code"><i class="fa-solid fa-gift"></i> Referral Code</label>
-                        <input type="number" id="form-referral-credits" name="form-referral-credits"
+                        <input type="text" id="form-referral-code" name="formReferralCode"
                             placeholder="Enter Course Referral Code">
                     </div>
                     <!--description-->
                     <div class="form-controls">
                         <label for="form-course-description"><i class="fa-regular fa-comment-dots"></i> Course
                             Description</label>
-                        <input type="text area" id="form-course-description" name="form-course-description"
+                        <input type="text area" id="form-course-description" name="formCourseDescription"
                             placeholder="Enter Course Description">
                     </div>
                 </div>
@@ -532,9 +532,36 @@
 
 
         // Add Course Form Submit Event
-        AddCourseForm.addEventListener("submit", (e) => {
+        AddCourseForm.addEventListener("submit", function(e){
             e.preventDefault();
-            console.log("Course Form Submitted");
+            // console.log("Course Form Submitted");
+
+            // to validate form data and then process to localStorage
+            
+            const currentCourse ={
+                courseName: this.formCourseName.value,
+                courseCode: this.formCourseCode.value,
+                instructorName: this.formInstructorName.value,
+                courseDuration: this.formCourseDuration.value,
+                startDate: this.formStartDate.value,
+                endDate: this.formEndDate.value,
+                courseCredits: this.formCredits.value,
+                referralCode: this.formReferralCode.value,
+                courseDescription: this.formCourseDescription.value,
+            };
+
+            // console.log(currentCourse);
+            // to get stored courses list or if no book exists then create a empty array
+
+            const courseList = JSON.parse(localStorage.getItem("courseList")) || [];
+
+            // to add currentCourse in courseList
+            courseList.push(currentCourse);
+
+            // to update localStorage data
+            localStorage.setItem("courseList", JSON.stringify(courseList));
+
+            console.log("Congratulations!!, Book Added Success.")
         });
 
         // Add Student Form Submit Event
