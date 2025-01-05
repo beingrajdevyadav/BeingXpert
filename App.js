@@ -13,11 +13,13 @@ import Students from './Components/Students.js';
 function App(navLink) {
     console.log(navLink)
     return (
-        `  <div class="container">
-          <h1> Welcome to  ${navLink} page </h1> 
-          <h2>Working On..</h2>
-        </div>`
+        QuickActions()
     );
 }
 
 export default App;
+
+// `  <div class="container">
+//           <h1> Welcome to  ${navLink} page </h1> 
+//           <h2>Working On..</h2>
+//         </div>`
