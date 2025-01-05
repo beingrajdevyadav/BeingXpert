@@ -572,9 +572,12 @@
         // Add Student Form Submit Event
         AddStudentForm.addEventListener("submit", function (e) {
             e.preventDefault();
-            console.log("Student Form Submitted");
+            // console.log("Student Form Submitted");
 
-            // to collect form data in the form of object
+            // to validate form data and then process to localStorage
+            if(this.formFirstName.value && this.formLastName.value && this.formStudentId.value && this.formBirthDate.value && this.formEmail.value && this.formPhoneNumber.value && this.formEnrollmentDate.value && this.formMajor.value && this.formAddress.value) {
+                console.log("Form data is valid");
+                            // to collect form data in the form of object
 
             const currentStudent = {
                 firstName: this.formFirstName.value,
@@ -586,7 +589,7 @@
                 enrollmentDate: this.formEnrollmentDate.value,
                 formMajor: this.formMajor.value,
                 address: this.formAddress.value,
-            }   
+            }
 
             console.log(currentStudent);
 
@@ -599,6 +602,12 @@
 
             // to update localstorage studentlist data
             localStorage.setItem('studentList', JSON.stringify(studentList));
+
+            } else {
+                console.log("Sorry!, All input fields are required.");
+            };
+
+
         });
 
     </script>
