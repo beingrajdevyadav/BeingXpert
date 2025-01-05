@@ -370,37 +370,36 @@
                     <!--first name-->
                     <div class="form-controls">
                         <label for="add-first-name"><i class="fa-solid fa-user"></i> First Name</label>
-                        <input type="text" name="add-first-name" id="add-first-name" placeholder="Enter First Name">
+                        <input type="text" name="formFirstName" id="form-first-name" placeholder="Enter First Name">
                     </div>
 
                     <!--last name-->
                     <div class="form-controls">
                         <label for="add-last-name"><i class="fa-solid fa-user"></i> Last Name</label>
 
-                        <input type="text" name="add-last-name" id="add-last-name" placeholder="Enter Last Name">
+                        <input type="text" name="formLastName" id="add-last-name" placeholder="Enter Last Name">
                     </div>
 
                     <!--student id-->
                     <div class="form-controls">
                         <label for="add-student-id"><i class="fa-solid fa-at"></i> Student Id</label>
-                        <input type="text" name="add-student-id" id="add-student-id" placeholder="Enter Student Id">
+                        <input type="text" name="formStudentId" id="add-student-id" placeholder="Enter Student Id">
                     </div>
 
                     <!--date of birth-->
                     <div class="form-controls">
                         <label for="add-birth-date"><i class="fa-solid fa-calendar-days"></i> Date Of Birth</label>
-                        <input type="date" name="add-birth-date" id="add-birth-date">
+                        <input type="date" name="formBirthDate" id="add-birth-date">
                     </div>
                     <!--e-mail-->
                     <div class="form-controls">
                         <label for="add-email"><i class="fa-solid fa-envelope"></i> E-Mail </label>
-                        <input type="email" name="add-email" id="add-email" placeholder="Enter E-Mail">
+                        <input type="email" name="formEmail" id="add-email" placeholder="Enter E-Mail">
                     </div>
                     <!--phone number-->
                     <div class="form-controls">
                         <label for="add-phone-number"><i class="fa-solid fa-phone"></i> Phone Number</label>
-                        <input type="tel" name="add-phone-number" id="add-phone-number"
-                            placeholder="Enter Phone Number">
+                        <input type="tel" name="formPhoneNumber" id="add-phone-number" placeholder="Enter Phone Number">
                     </div>
 
 
@@ -408,21 +407,21 @@
                     <!--enrollment path-->
                     <div class="form-controls">
                         <label for="add-enrollment-path"><i class="fa-solid fa-calendar-plus"></i> Enrollment
-                            Path</label>
-                        <input type="date" id="add-enrollment-path">
+                            Date</label>
+                        <input type="date" name="formEnrollmentDate" id="add-enrollment-date">
                     </div>
 
                     <!--major-->
                     <div class="form-controls">
                         <label for="add-major"><i class="fa-regular fa-heart"></i> Major</label>
-                        <input type="text" name="add-major" id="add-major" placeholder="Enter Major">
+                        <input type="text" name="formMajor" id="add-major" placeholder="Enter Major">
 
                     </div>
 
                     <!--address-->
                     <div class="form-controls">
-                        <label for="add-address"><i class="fa-solid fa-location-dot"></i> Address</label>
-                        <textarea name="add-address" id="add-address" placeholder="Enter Address"></textarea>
+                        <label for="form-address"><i class="fa-solid fa-location-dot"></i> Address</label>
+                        <textarea name="formAddress" id="form-address" placeholder="Enter Address"></textarea>
                     </div>
                 </div>
 
@@ -571,9 +570,35 @@
         });
 
         // Add Student Form Submit Event
-        AddStudentForm.addEventListener("submit", (e) => {
+        AddStudentForm.addEventListener("submit", function (e) {
             e.preventDefault();
             console.log("Student Form Submitted");
+
+            // to collect form data in the form of object
+
+            const currentStudent = {
+                firstName: this.formFirstName.value,
+                lastName: this.formLastName.value,
+                studentId: this.formStudentId.value,
+                birthDate: this.formBirthDate.value,
+                eMail: this.formEmail.value,
+                phoneNumber: this.formPhoneNumber.value,
+                enrollmentDate: this.formEnrollmentDate.value,
+                formMajor: this.formMajor.value,
+                address: this.formAddress.value,
+            }   
+
+            console.log(currentStudent);
+
+            // to get stored stundents list or create an empty array
+
+            const studentList = JSON.parse(localStorage.getItem("studentList")) || [];
+
+            // to add currentStudent in studentList
+            studentList.push(currentStudent);
+
+            // to update localstorage studentlist data
+            localStorage.setItem('studentList', JSON.stringify(studentList));
         });
 
     </script>
