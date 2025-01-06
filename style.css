@@ -58,8 +58,7 @@ main{
     padding: .5rem;
 }
 #navbar ul li{
-    margin-top: .5rem;
-    padding: 10px;
+   
     font-size: 14px;
     transition: all 0.5s ease;
     cursor: pointer;
@@ -67,6 +66,9 @@ main{
 #navbar ul li a{
     color: #ddd;
     text-decoration: none;
+    display: block;
+    margin-top: .5rem;
+    padding: 10px;
 }
 #navbar ul li:hover{
     background-color: #213555;
