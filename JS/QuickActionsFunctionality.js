@@ -156,3 +156,8 @@ function AddStudentFormSubmit(e) {
         alert("Sorry!, All input fields are required.")
     };
 };
+
+
+AddBookForm.addEventListener("submit", AddBookFormSubmit);
+AddCourseForm.addEventListener("submit", AddCourseFormSubmit);
+AddStudentForm.addEventListener("submit", AddStudentFormSubmit);
