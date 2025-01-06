@@ -337,6 +337,4 @@ const students = [
     }
 ];
 
-localStorage.setItem("books", JSON.stringify(books));
-localStorage.setItem("courses", JSON.stringify(courses));
-localStorage.setItem("students", JSON.stringify(students));
+export { books, courses, students };
