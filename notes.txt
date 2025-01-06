@@ -183,3 +183,148 @@ const isEvenOrOdd = (num) => {
 
 console.log(isEvenOrOdd(10)); // Output: Even
 console.log(isEvenOrOdd(11)); // Output: Odd
+
+>>>>>>>>>>> 📆 07/01/2025 >>>>>>>
+👨‍💻 Please, practice it in codespace.html file 🔥
+
+Body Section
+
+Books Table:
+
+- A <h1> element with the text "Books" is used as a heading.
+- A <table> element with id="booksTable" and border="1" is created.
+- The <thead> section contains a row (<tr>) with column headers (<th>) for book details.
+- The <tbody> section is empty and will be populated dynamically.
+
+Courses Table:
+
+- A <h1> element with the text "Courses" is used as a heading.
+- A <table> element with id="coursesTable" and border="1" is created.
+- The <thead> section contains a row (<tr>) with column headers (<th>) for course details.
+- The <tbody> section is empty and will be populated dynamically.
+
+Students Table:
+
+- A <h1> element with the text "Students" is used as a heading.
+- A <table> element with id="studentsTable" and border="1" is created.
+- The <thead> section contains a row (<tr>) with column headers (<th>) for student details.
+- The <tbody> section is empty and will be populated dynamically.
+
+
+Script Tag:
+
+- The script is defined as a module using type="module".
+- The books, courses, and students arrays are imported from sample_data.js.
+Function Definition:
+
+- A function populateTable is defined to dynamically populate the tables with data.
+
+Parameters:
+- data: The array of objects to be displayed (e.g., books, courses, students).
+- tableId: The id of the table to populate.
+
+Table Population Logic:
+
+- The function selects the <tbody> of the specified table using document.getElementById(tableId).querySelector('tbody').
+
+- It iterates over each item in the data array using forEach.
+
+- For each item, a new table row (<tr>) is created.
+
+The row's inner HTML is set using template strings:
+
+- Object.values(item).map(value => <td>${value}</td>).join(''):
+- Object.values(item) gets an array of the object's values.
+- map creates an array of <td> elements for each value.
+- join('') concatenates the <td> elements into a single string.
+- The row is appended to the table's <tbody>. 
+
+Function Calls:
+
+The populateTable function is called three times to populate each table:
+- populateTable(books, 'booksTable')
+- populateTable(courses, 'coursesTable')
+- populateTable(students, 'studentsTable')
+
+
+********* html and javaScript code ********
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Tables</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <table id="booksTable" border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Publisher</th>
+                <th>Publication Date</th>
+                <th>Genre</th>
+                <th>Number of Pages</th>
+                <th>Language</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h1>Courses</h1>
+    <table id="coursesTable" border="1">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Instructor</th>
+                <th>Duration</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Credits</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h1>Students</h1>
+    <table id="studentsTable" border="1">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Student ID</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Enrollment Date</th>
+                <th>Major</th>
+                <th>GPA</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script type="module">
+        import { books, courses, students } from './sample_data.js';
+
+        function populateTable(data, tableId) {
+            const tableBody = document.getElementById(tableId).querySelector('tbody');
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = Object.values(item).map(value => `<td>${value}</td>`).join('');
+                tableBody.appendChild(row);
+            });
+        }
+
+        populateTable(books, 'booksTable');
+        populateTable(courses, 'coursesTable');
+        populateTable(students, 'studentsTable');
+    </script>
+</body>
+</html>
