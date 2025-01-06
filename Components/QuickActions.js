@@ -12,7 +12,7 @@ const QuickActions = () => {
 
         <!--book form section-->
         <section class="qa-form-container active-form" id="AddBookSection">
-            <form id="book-form" class="quick-actions-form">
+            <form id="book-form" onsubmit="AddBookFormSubmit(e);" class="quick-actions-form">
                 <div class="add-form-title">
                     <h2>New Book Form</h2>
                     <hr>
@@ -88,7 +88,7 @@ const QuickActions = () => {
         <section class="qa-form-container crs-frm" id="AddCourseSection">
 
 
-            <form id="course-form" class="quick-actions-form">
+            <form id="course-form" onsubmit="AddCourseFormSubmit(e);" class="quick-actions-form">
 
                 <div class="add-form-title">
                     <h2>Add Course Form</h2>
@@ -164,7 +164,7 @@ const QuickActions = () => {
 
         <section class="qa-form-container std-frm" id="AddStudentSection">
 
-            <form id="add-student-form" class="quick-actions-form">
+            <form id="add-student-form" onsubmit="AddStudentFormSubmit(e);" class="quick-actions-form">
                 <div class="add-form-title">
                     <h2>Add Student Form</h2>
                     <hr>
@@ -239,7 +239,12 @@ const QuickActions = () => {
             </form>
 
         </section>
+
+        
+    <!-- Quick Actions Functionality  -->
+     <script src="./JS/QuickActionsFunctionality.js"></script>
     </div>`
   )
 };
 export default QuickActions;
+

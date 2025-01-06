@@ -64,6 +64,10 @@ main{
     transition: all 0.5s ease;
     cursor: pointer;
 }
+#navbar ul li a{
+    color: #ddd;
+    text-decoration: none;
+}
 #navbar ul li:hover{
     background-color: #213555;
     color: #ddd;
