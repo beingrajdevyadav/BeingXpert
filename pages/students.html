@@ -84,8 +84,8 @@
             <!-- student details container  -->
             <div class="student-page-container">
                 <div class="student-page-body">
-                    <div class="student-details">
-                        <h2>Rajdev Yadav</h2>
+                    <div class="student-details" id="studentDetails">
+                        <!-- <h2>Rajdev Yadav</h2>
                         <hr>
                         <p><b>Student ID : </b> </p>
                         <p><b>Email ID : </b> </p>
@@ -94,7 +94,7 @@
                         <p><b>GPA : </b> </p>
                         <p><b>Enrollment Date : </b> </p>
                         <p><b>Major : </b> </p>
-                        <p><b>Address : </b> </p>
+                        <p><b>Address : </b> </p> -->
                     </div>
                     <button>Download PDF</button>
                 </div>
@@ -125,6 +125,26 @@
         });
 
         // to show current student details 
+        function PrintCurrentStudent(student) {
+            const studentDetailsDiv = document.querySelector("#studentDetails");
+
+            let studentInfo = `
+                        <h2>${student.firstName} ${student.lastName}</h2>
+                        <hr>
+                        <p><b>Student ID : </b> ${student.studentId} </p>
+                        <p><b>Email ID : </b> ${student.email} </p>
+                        <p><b>Phone Number : </b> ${student.phoneNumber} </p>
+                        <p><b>Date Of Birth : </b> ${student.dateOfBirth}</p>
+                        <p><b>GPA : </b> ${student.gpa} </p>
+                        <p><b>Enrollment Date : </b> ${student.enrollmentDate} </p>
+                        <p><b>Major : </b> ${student.major} </p>
+                        <p><b>Address : </b> ${student.address} </p>
+`;
+
+studentDetailsDiv.innerHTML = studentInfo;
+        };
+
+PrintCurrentStudent(students[5]);
     </script>
 </body>
 
