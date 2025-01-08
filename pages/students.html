@@ -17,7 +17,7 @@
 
 
     <!-- Quick Actions CSS  -->
-    <link rel="stylesheet" href="../CSS/QuickActionsStyle.css">
+    <link rel="stylesheet" href="../CSS/Students.css">
 </head>
 
 <body>
@@ -43,7 +43,8 @@
                 <li class="nav-link" name="QuickActions"><a href="./quick-actions.html"><i
                             class="fa-regular fa-lightbulb"></i> <span>Quick
                             Actions</span></a> </li>
-                <li class="nav-link active" name="Students"> <a href="./students.html"><i class="fa-solid fa-users-line"></i>
+                <li class="nav-link active" name="Students"> <a href="./students.html"><i
+                            class="fa-solid fa-users-line"></i>
                         <span>Students</span></a> </li>
                 <li class="nav-link" name="Courses"> <a href="./courses.html"><i class="fa-solid fa-code"></i>
                         <span>Courses</span></a> </li>
@@ -75,13 +76,36 @@
 
         <div id="root">
 
-            <h1> Students List </h1>
+            <div class="student-page-title">
+                <h1> Students List </h1>
+                <hr>
+            </div>
+
+            <div class="student-page-body">
+
+                <div class="student-page-nav">
+                    <ol id="student-list">
+
+                    </ol>
+                </div>
+            </div>
+
         </div>
     </main>
 
 
     <!-- Quick Actions Functionality  -->
-    <script src="../JS/QuickActionsFunctionality.js"></script>
+    <!-- <script src="../JS/QuickActionsFunctionality.js"></script> -->
+    <script type="module">
+        import { students } from '../sample_data.js'
+        // console.log(students);
+
+        const listTag = document.querySelector("#student-list");
+        students.forEach(student => {
+            // console.log(student);
+            listTag.innerHTML += `<li>${student.firstName} ${student.lastName}</li>`;
+        });
+    </script>
 </body>
 
 </html>
