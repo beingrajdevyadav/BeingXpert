@@ -1,3 +1,10 @@
+
+.student-page-body{
+    padding: 1rem;
+}
 .student-page-nav{
     padding: 1rem;
+}
+.student-details{
+    padding: 1.5rem;
 }
