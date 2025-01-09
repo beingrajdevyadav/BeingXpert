@@ -181,34 +181,69 @@
         import { students } from '../sample_data.js'
         // console.log(students);
 
-        const listTag = document.querySelector("#student-list");
-        students.forEach(student => {
-            // console.log(student);
-            listTag.innerHTML += `<li>${student.firstName} ${student.lastName}</li>`;
-        });
+        
 
+        // ###########################################
+
+        
         // to handle click event on student list
-        listTag.addEventListener("click", (e) => {
-            const studentName = e.target.innerText;
+        function HandleListItemClick() {
+            const studentName = this.innerText;
             const student = students.find(student => `${student.firstName} ${student.lastName}` === studentName);
             PrintStudentDetails(student);
-        });
+            // console.log(student);
+
+            // to update active students list item
+            const listItems = document.querySelectorAll("#student-list li");
+            listItems.forEach(item => {
+                item.classList.remove("active");
+            });
+            e.target.classList.add("active");
+
+            // to enable download pdf button
+            document.querySelector("#downloadTableBtn").removeAttribute("disabled");    
+
+            console.log("list item clicked");
+        };
+
+        // const listItems = document.querySelectorAll("#student-list li");
+        // listItems.forEach(item => {
+        //     item.addEventListener("click", (e) => {
+        //         const studentName = e.target.innerText;
+        //         const student = students.find(student => `${student.firstName} ${student.lastName}` === studentName);
+        //         PrintStudentDetails(student);
+        //         console.log(student);
+        //     });
+        // });
+
+
+        // to handle click event on student list
+        // listTag.addEventListener("click", (e) => {
+        //     const studentName = e.target.innerText;
+        //     const student = students.find(student => `${student.firstName} ${student.lastName}` === studentName);
+        //     // PrintStudentDetails(student);
+        //     console.log(student);
+        // });
 
         // to update active students list item
-        
+
         // to print whole students list
         function PrintStudentsList() {
-            const studentListDiv = document.querySelector("#student-list");
-            studentListDiv.innerHTML = "";
+            const studentListUl = document.querySelector("#student-list");
+            studentListUl.innerHTML = "";
             students.forEach(student => {
-                studentListDiv.innerHTML += `<li>${student.firstName} ${student.lastName}</li>`;
+                studentListUl.innerHTML += `<li onclick="HandleListItemClick();">${student.firstName} ${student.lastName}</li>`;
             });
+            console.log("printed student list");
         };
+
+
+
         // to print current student details 
         function PrintStudentDetails(student) {
             const studentDetailsDiv = document.querySelector("#tableContainer");
 
-            console.log(student);
+            // console.log(student);
             let studentInfo = `
                         <table border="1">
                             <tr>
@@ -276,9 +311,18 @@
 `;
 
             studentDetailsDiv.innerHTML = studentInfo;
+            console.log("printed student details");
         };
 
-        PrintStudentDetails(students[5]);
+        
+
+        // on page load, this iife function will be called
+        (function(){
+            console.log("page loaded");
+            PrintStudentsList(students);
+            PrintStudentDetails(students[0]);
+            console.log("page loading completed");
+        })();
     </script>
 </body>
 
