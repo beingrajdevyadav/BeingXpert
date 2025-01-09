@@ -187,8 +187,25 @@
             listTag.innerHTML += `<li>${student.firstName} ${student.lastName}</li>`;
         });
 
-        // to show current student details 
-        function PrintCurrentStudent(student) {
+        // to handle click event on student list
+        listTag.addEventListener("click", (e) => {
+            const studentName = e.target.innerText;
+            const student = students.find(student => `${student.firstName} ${student.lastName}` === studentName);
+            PrintStudentDetails(student);
+        });
+
+        // to update active students list item
+        
+        // to print whole students list
+        function PrintStudentsList() {
+            const studentListDiv = document.querySelector("#student-list");
+            studentListDiv.innerHTML = "";
+            students.forEach(student => {
+                studentListDiv.innerHTML += `<li>${student.firstName} ${student.lastName}</li>`;
+            });
+        };
+        // to print current student details 
+        function PrintStudentDetails(student) {
             const studentDetailsDiv = document.querySelector("#tableContainer");
 
             console.log(student);
@@ -261,7 +278,7 @@
             studentDetailsDiv.innerHTML = studentInfo;
         };
 
-        PrintCurrentStudent(students[5]);
+        PrintStudentDetails(students[5]);
     </script>
 </body>
 

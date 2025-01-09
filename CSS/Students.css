@@ -31,6 +31,9 @@
 .students-list-items li:hover{
     background-color: #213555;
 }
+.students-list-items li.active{
+    background-color: #213555;
+}
 .student-details{
     padding: 1.5rem;
     border: 1px solid #ddd;
