@@ -328,3 +328,25 @@ The populateTable function is called three times to populate each table:
     </script>
 </body>
 </html>
+
+
+################  09/01/2024 ##############
+To download html table as pdf, we need 2 javaScript libraries to include in our project.
+
+1. jsPDF
+2. html2canvas
+
+Explanation : 
+
+1. Include jsPDF and html2canvas Libraries:
+- The jsPDF and html2canvas libraries are included using CDN links.
+
+2. HTML Structure:
+- The HTML structure includes a table with id="studentsTable" and a button with id="downloadPdfBtn".
+
+3. JavaScript Code:
+- An event listener is added to the button to handle the click event.
+- When the button is clicked, a new jsPDF instance is created.
+-The html2canvas function captures the table content and converts it to a canvas.
+- The canvas is then converted to an image and added to the PDF.
+- The PDF is saved with the filename students_details.pdf.
