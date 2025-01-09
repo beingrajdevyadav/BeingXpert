@@ -7,6 +7,7 @@
 }
 .student-page-body{
     padding: 1rem;
+    min-width: 50%;
 }
 .student-page-nav{
     padding: 1rem;
@@ -46,11 +47,19 @@
 .student-details hr{
 margin: .5rem 0;
 }
-.student-details p{
-    margin: .5rem 0;
+
+table{
+    width: 100%;
 }
-.student-details p b{
-    margin-right: .25rem;
+tr{
+    padding: .8rem;
+    /* border-bottom: 1px solid #ddd; */
+}
+td{
+    text-align: left;
+    padding: .5rem;
+    /* background-color: #dfdfdf; */
+
 }
 
 .student-page-body button{
@@ -63,9 +72,10 @@ margin: .5rem 0;
     outline: none;
     color: #ddd;
     background-color: #3E5879;
-
+    cursor: pointer;
 }
+
 .student-page-body button:hover{
     background-color: #213555;
-
 }
+
