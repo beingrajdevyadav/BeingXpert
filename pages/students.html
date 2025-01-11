@@ -91,7 +91,7 @@
             <div class="student-page-container">
                 <div class="student-page-body">
                     <div class="student-details" id="studentDetails">
-                        <h2>Rajdev Yadav</h2>
+                        <h2 id="studentFullname">Rajdev Yadav</h2>
                         <hr>
 
                         <!-- <table>
@@ -242,10 +242,18 @@
         // to print current student details 
         function PrintStudentDetails(student) {
             const studentDetailsDiv = document.querySelector("#tableContainer");
-
+document.querySelector("#studentFullname").innerText = `${student.firstName} ${student.lastName}`;
             // console.log(student);
             let studentInfo = `
                         <table border="1">
+                            <tr>
+                                <td>First Name :</td>
+                                <td>${student.firstName}</td>
+                            </tr>
+                            <tr>
+                                <td>Last Name :</td>
+                                <td>${student.lastName}</td>
+                            </tr>
                             <tr>
                                 <td>Student Id :</td>
                                 <td>${student.studentId}</td>
