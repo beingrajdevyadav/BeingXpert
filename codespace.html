@@ -26,10 +26,10 @@
         body {
             background-color: #f1f1f1;
             color: #555;
-
+            padding: 1rem;
         }
 
-       
+
 
         /* Start CSS Coding Here */
     </style>
@@ -37,12 +37,38 @@
 
 <body>
     <!-- Start HTML Coding Here -->
-<h1>Hello, </h1>
+    <h1>Hello, </h1>
+    <ul>
+        <li>John</li>
+        <li>Jane</li>
+        <li>David</li>
+        <li>Sarah</li>
+        <li>Michael</li>
+        <li>Emily</li>
+        <li>Daniel</li>
+        <li>Olivia</li>
+        <li>James</li>
+    </ul>
 
-
+    <button id="show-alert">alert btn</button>
     <!-- Write JavaScript Code Here  -->
-    <script>
-       
+    <script type="module">
+        import { students } from './sample_data.js';
+
+        const liTags = document.querySelectorAll("ul li");
+
+        liTags.forEach((li, inx) => {
+            // console.log(li.innerHTML);
+            li.addEventListener("click", function () {
+                console.log(li.innerHTML, inx);
+            })
+        })
+        // ulTag.innerHTML = html;
+
+        document.getElementById('show-alert').addEventListener("click", function () {
+            console.log("button clicked.");
+        })
+
     </script>
 </body>
 
