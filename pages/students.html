@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students | BeingXpert</title>
 
-    <!-- jsPDF and html2canvas libraries  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-    <!-- ######################################  -->
 
     <!-- font awesome icons cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -88,7 +84,7 @@
             </div>
 
             <!-- students details table  -->
-            <table>
+            <table id="studentsDetailsTable">
                 <thead>
                     <tr>
                         <th>Sr. No.</th>
@@ -120,7 +116,7 @@
             <hr>
             <!-- students details actions  -->
             <div class="students-page-actions">
-                <button>PDF <i class="fa-solid fa-download"></i></button>
+                <button id="downloadPDF">PDF <i class="fa-solid fa-download"></i></button>
                 <button> Excel <i class="fa-solid fa-download"></i></button>
                 <button><i class="fa-solid fa-plus"></i> Add New Student </button>
             </div>
@@ -129,11 +125,18 @@
     </main>
 
     <!-- ---------------------------- JavaScript Files -------------------------------- -->
-    <!-- JsPDF CDN link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <!-- Quick Actions Functionality  -->
-    <script type="module" src="../JS/StudentsFunctionality.js"></script>
 
+
+
+
+    <!-- jsPDF cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!-- html2canvas cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+   
+    <!-- custom JavaScript  -->
+     <script type="module" src="../JS/StudentsFunctionality.js"></script>
 </body>
 
 </html>
