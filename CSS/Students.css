@@ -53,11 +53,23 @@ margin: .5rem 0;
 
 table{
     width: 100%;
+    margin: 1rem 0;
+}
+thead th {
+    background-color: #3E5879;
+    color: #ddd;
+   padding: .5rem;
 }
 tr{
     padding: .8rem;
     /* border-bottom: 1px solid #ddd; */
 }
+
+tbody tr{
+    background-color: #fff;
+    cursor: pointer;
+}
+
 td{
     text-align: center;
     padding: .5rem;
@@ -65,10 +77,16 @@ td{
 
 }
 
-.student-page-body button{
+.students-page-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+.students-page-actions button{
     display: block;
-    width: 50%;
-    margin: auto;
+    width: 20%;
     height: 6vh;
     border-radius: 3px;
     border: none;
@@ -76,9 +94,10 @@ td{
     color: #ddd;
     background-color: #3E5879;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
-.student-page-body button:hover{
+.students-page-actions button:hover{
     background-color: #213555;
 }
 
