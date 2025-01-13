@@ -101,88 +101,29 @@
                         <th>Enrollment Data</th>
                     </tr>
                 </thead>
-                
-                <tbody>
-                    <tr>
-                       <td>1</td> 
-                       <td>bx1235</td> 
-                       <td>Rajdev Yadav</td> 
-                       <td>Computer Science</td> 
-                       <td>8.7</td> 
-                       <td>Issued</td> 
-                       <td>Active</td> 
-                       <td>13-01-2025</td> 
-                    </tr>
-                    <tr>
-                       <td>1</td> 
-                       <td>bx1235</td> 
-                       <td>Rajdev Yadav</td> 
-                       <td>Computer Science</td> 
-                       <td>8.7</td> 
-                       <td>Issued</td> 
-                       <td>Active</td> 
-                       <td>13-01-2025</td> 
-                    </tr>
-                    <tr>
-                       <td>1</td> 
-                       <td>bx1235</td> 
-                       <td>Rajdev Yadav</td> 
-                       <td>Computer Science</td> 
-                       <td>8.7</td> 
-                       <td>Issued</td> 
-                       <td>Active</td> 
-                       <td>13-01-2025</td> 
-                    </tr>
-                    <tr>
-                       <td>1</td> 
-                       <td>bx1235</td> 
-                       <td>Rajdev Yadav</td> 
-                       <td>Computer Science</td> 
-                       <td>8.7</td> 
-                       <td>Issued</td> 
-                       <td>Active</td> 
-                       <td>13-01-2025</td> 
-                    </tr>
-                    <tr>
-                       <td>1</td> 
-                       <td>bx1235</td> 
-                       <td>Rajdev Yadav</td> 
-                       <td>Computer Science</td> 
-                       <td>8.7</td> 
-                       <td>Issued</td> 
-                       <td>Active</td> 
-                       <td>13-01-2025</td> 
-                    </tr>
-                    <tr>
-                       <td>1</td> 
-                       <td>bx1235</td> 
-                       <td>Rajdev Yadav</td> 
-                       <td>Computer Science</td> 
-                       <td>8.7</td> 
-                       <td>Issued</td> 
-                       <td>Active</td> 
-                       <td>13-01-2025</td> 
-                    </tr>
-                    <tr>
-                       <td>1</td> 
-                       <td>bx1235</td> 
-                       <td>Rajdev Yadav</td> 
-                       <td>Computer Science</td> 
-                       <td>8.7</td> 
-                       <td>Issued</td> 
-                       <td>Active</td> 
-                       <td>13-01-2025</td> 
-                    </tr>
+
+                <tbody id="StudentsTableBody">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>bx1235</td>
+                        <td>Rajdev Yadav</td>
+                        <td>Computer Science</td>
+                        <td>8.7</td>
+                        <td>Issued</td>
+                        <td>Active</td>
+                        <td>13-01-2025</td>
+                    </tr> -->
+
                 </tbody>
             </table>
 
             <hr>
             <!-- students details actions  -->
-<div class="students-page-actions">
-    <button>PDF <i class="fa-solid fa-download"></i></button>
-    <button> Excel <i class="fa-solid fa-download"></i></button>
-    <button><i class="fa-solid fa-plus"></i> Add New Student </button>
-</div>
+            <div class="students-page-actions">
+                <button>PDF <i class="fa-solid fa-download"></i></button>
+                <button> Excel <i class="fa-solid fa-download"></i></button>
+                <button><i class="fa-solid fa-plus"></i> Add New Student </button>
+            </div>
         </div>
         </div>
     </main>
@@ -194,7 +135,31 @@
         import { students } from '../sample_data.js'
         // console.log(students);
 
+        // function to print students table
+        function PrintStudentsTable(students) {
+            const tableBody = document.querySelector("#StudentsTableBody");
 
+            let tbody = '';
+
+            students.forEach((student, i) => {
+                tbody += `
+                       <tr>
+                       <td>${i + 1}</td> 
+                       <td>${student.studentId}</td> 
+                       <td>${student.firstName} ${student.lastName}</td> 
+                       <td>${student.major}</td> 
+                       <td>${student.gpa}</td> 
+                       <td>${student.idCardStatus}</td> 
+                       <td>${student.libraryStatus}</td> 
+                       <td>${student.enrollmentDate}</td> 
+                    </tr>
+`;
+            });
+
+            tableBody.innerHTML = tbody;
+        };
+
+        PrintStudentsTable(students);
         console.log(students);
     </script>
 </body>
