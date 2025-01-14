@@ -47,3 +47,9 @@ document.getElementById("downloadPDF").addEventListener("click", function () {
         pdf.save("StudentsDetailsTable.pdf");
     });
 });
+
+
+// to navigate on another page
+document.getElementById("nevigateBtn").addEventListener("click", function(){
+    window.location.href = './quick-actions.html';
+})
