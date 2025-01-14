@@ -109,7 +109,11 @@
     padding: 10px;
     color: #444;
 }
-
+.form-controls select{
+    width: 100%;
+    padding: 10px;
+    color: #444;
+}
 .form-controls textarea {
     width: 100%;
     padding: 10px;

@@ -14,7 +14,7 @@
 
     <!-- custom css  -->
     <link rel="stylesheet" href="../style.css">
-    
+
 
     <!-- Quick Actions CSS  -->
     <link rel="stylesheet" href="../CSS/QuickActionsStyle.css">
@@ -38,22 +38,32 @@
         <!-- navbar links -->
         <div id="navbar">
             <ul class="nav-links">
-                <li class="nav-link " name="Home"> <a href="../index.html"><i
-                            class="fa-solid fa-house-chimney"></i> <span>Home</span></a> </li>
-                <li class="nav-link active" name="QuickActions"><a href="./quick-actions.html"><i class="fa-regular fa-lightbulb"></i> <span>Quick
-                    Actions</span></a> </li>
-                <li class="nav-link" name="Students"> <a href="./students.html"><i class="fa-solid fa-users-line"></i> <span>Students</span></a> </li>
-                <li class="nav-link" name="Courses"> <a href="./courses.html"><i class="fa-solid fa-code"></i> <span>Courses</span></a> </li>
-                <li class="nav-link" name="Library"> <a href="./library.html"><i class="fa-solid fa-book-open-reader"></i> <span>Library</span></a>  
+                <li class="nav-link " name="Home"> <a href="../index.html"><i class="fa-solid fa-house-chimney"></i>
+                        <span>Home</span></a> </li>
+                <li class="nav-link active" name="QuickActions"><a href="./quick-actions.html"><i
+                            class="fa-regular fa-lightbulb"></i> <span>Quick
+                            Actions</span></a> </li>
+                <li class="nav-link" name="Students"> <a href="./students.html"><i class="fa-solid fa-users-line"></i>
+                        <span>Students</span></a> </li>
+                <li class="nav-link" name="Courses"> <a href="./courses.html"><i class="fa-solid fa-code"></i>
+                        <span>Courses</span></a> </li>
+                <li class="nav-link" name="Library"> <a href="./library.html"><i
+                            class="fa-solid fa-book-open-reader"></i> <span>Library</span></a>
                 </li>
-                <li class="nav-link" name="Certificate"> <a href="./certificates.html"><i class="fa-solid fa-graduation-cap"></i>
-                    <span>Certificate</span></a> </li>
-                <li class="nav-link" name="OfferLetter"> <a href="./offer-letter.html"><i class="fa-solid fa-user-tie"></i> <span>Offer Letters</span></a> 
+                <li class="nav-link" name="Certificate"> <a href="./certificates.html"><i
+                            class="fa-solid fa-graduation-cap"></i>
+                        <span>Certificate</span></a> </li>
+                <li class="nav-link" name="OfferLetter"> <a href="./offer-letter.html"><i
+                            class="fa-solid fa-user-tie"></i> <span>Offer Letters</span></a>
                 </li>
-                <li class="nav-link" name="AdmitCard"> <a href="./admit-card.html"><i class="fa-solid fa-user-lock"></i> <span>Admit Card</span></a> </li>
-                <li class="nav-link" name="IdCard">  <a href="./id-card.html"><i class="fa-solid fa-id-card-clip"></i> <span>ID Card</span></a></li>
-                <li class="nav-link" name="Reports"> <a href="./reports.html"><i class="fa-solid fa-chart-simple"></i> <span>Reports</span></a> </li>
-                <li class="nav-link" name="Help"> <a href="./help.html"><i class="fa-solid fa-headset"></i> <span>Help</span></a> </li>
+                <li class="nav-link" name="AdmitCard"> <a href="./admit-card.html"><i class="fa-solid fa-user-lock"></i>
+                        <span>Admit Card</span></a> </li>
+                <li class="nav-link" name="IdCard"> <a href="./id-card.html"><i class="fa-solid fa-id-card-clip"></i>
+                        <span>ID Card</span></a></li>
+                <li class="nav-link" name="Reports"> <a href="./reports.html"><i class="fa-solid fa-chart-simple"></i>
+                        <span>Reports</span></a> </li>
+                <li class="nav-link" name="Help"> <a href="./help.html"><i class="fa-solid fa-headset"></i>
+                        <span>Help</span></a> </li>
             </ul>
 
             <p><span id="navbar-years"> </span> Powered By BeingXpert <br> 2024 - 2025</p>
@@ -73,8 +83,8 @@
                     <li name="AddCourseSection" class="q-a-nav-link"><i class="fa-solid fa-plus"></i> Course</li>
                     <li name="AddStudentSection" class="q-a-nav-link"><i class="fa-solid fa-plus"></i> Student</li>
                 </ul>
-        
-        
+
+
                 <!--book form section-->
                 <section class="qa-form-container active-form" id="AddBookSection">
                     <form id="book-form" onsubmit="AddBookFormSubmit(e);" class="quick-actions-form">
@@ -86,13 +96,15 @@
                             <!--book title-->
                             <div class="form-controls">
                                 <label for="formBookTitle"><i class="fa-solid fa-pen-nib"></i> Book Title</label>
-                                <input type="text" name="formBookTitle" id="formBookTitle" placeholder="Enter Book Title ">
+                                <input type="text" name="formBookTitle" id="formBookTitle"
+                                    placeholder="Enter Book Title ">
                             </div>
-        
+
                             <!--book author-->
                             <div class="form-controls">
                                 <label for="formBookAuthor"><i class="fa-solid fa-at"></i> Book Author</label>
-                                <input type="text" name="formBookAuthor" id="formBookAuthor" placeholder="Enter Author Name">
+                                <input type="text" name="formBookAuthor" id="formBookAuthor"
+                                    placeholder="Enter Author Name">
                             </div>
                             <!--isbn-->
                             <div class="form-controls">
@@ -122,7 +134,8 @@
                             <!--page number-->
                             <div class="form-controls">
                                 <label for="formBookPages"><i class="fa-solid fa-file-lines"></i> Book Pages </label>
-                                <input type="number" name="formBookPages" id="formBookPages" placeholder="Enter Book Pages">
+                                <input type="number" name="formBookPages" id="formBookPages"
+                                    placeholder="Enter Book Pages">
                             </div>
                             <!--language-->
                             <div class="form-controls">
@@ -130,10 +143,11 @@
                                 <input type="text" name="formBookLanguage" id="formBookLanguage"
                                     placeholder="Enter Book Language" />
                             </div>
-        
+
                             <!--description area-->
                             <div class="form-controls">
-                                <label for="formBookDescription"><i class="fa-solid fa-hashtag"></i> Book Description</label>
+                                <label for="formBookDescription"><i class="fa-solid fa-hashtag"></i> Book
+                                    Description</label>
                                 <textarea id="formBookDescription" name="formBookDescription"
                                     placeholder="Enter Book Description"></textarea>
                             </div>
@@ -141,35 +155,39 @@
                         <!--submit button-->
                         <div class="book-form-btns">
                             <button type="reset"><i class="fa-solid fa-rotate-right"></i> Reset</button>
-        
-                            <button type="submit" id="form-add-book-btn"><i class="fa-solid fa-plus"></i> Add Book</button>
+
+                            <button type="submit" id="form-add-book-btn"><i class="fa-solid fa-plus"></i> Add
+                                Book</button>
                         </div>
-        
+
                     </form>
-        
+
                 </section>
-        
+
                 <!--course form section-->
                 <section class="qa-form-container crs-frm" id="AddCourseSection">
-        
-        
+
+
                     <form id="course-form" onsubmit="AddCourseFormSubmit(e);" class="quick-actions-form">
-        
+
                         <div class="add-form-title">
                             <h2>Add Course Form</h2>
                             <hr>
                         </div>
-        
+
                         <div class="form-controls-wrapper">
                             <!--course name-->
                             <div class="form-controls">
-                                <label for="formCourseName"><i class="fa-solid fa-chalkboard-user"></i> Course Name</label>
-                                <input type="text" name="formCourseName" id="formCourseName" placeholder="Enter Course Name">
+                                <label for="formCourseName"><i class="fa-solid fa-chalkboard-user"></i> Course
+                                    Name</label>
+                                <input type="text" name="formCourseName" id="formCourseName"
+                                    placeholder="Enter Course Name">
                             </div>
                             <!--course code-->
                             <div class="form-controls">
                                 <label for="formCourseCode"><i class="fa-solid fa-microchip"></i> Course Code</label>
-                                <input type="text" name="formCourseCode" id="formCourseCode" placeholder="Enter Course Code">
+                                <input type="text" name="formCourseCode" id="formCourseCode"
+                                    placeholder="Enter Course Code">
                             </div>
                             <!--instructor-->
                             <div class="form-controls">
@@ -178,17 +196,19 @@
                                 <input type="text" id="formInstructorName" placeholder="Enter Instructor Name"
                                     name="formInstructorName">
                             </div>
-        
-        
+
+
                             <!--duration-->
                             <div class="form-controls">
-                                <label for="formCourseDuration"><i class="fa-regular fa-clock"></i> Course Duration</label>
+                                <label for="formCourseDuration"><i class="fa-regular fa-clock"></i> Course
+                                    Duration</label>
                                 <input type="number" id="formCourseDuration" name="formCourseDuration"
                                     placeholder="Enter Course Duration">
                             </div>
                             <!--start date-->
                             <div class="form-controls">
-                                <label for="formStartDate"><i class="fa-regular fa-calendar-plus"></i>Start Date </label>
+                                <label for="formStartDate"><i class="fa-regular fa-calendar-plus"></i>Start Date
+                                </label>
                                 <input type="date" id="formStartDate" name="formStartDate">
                             </div>
                             <!--end-date-->
@@ -198,8 +218,10 @@
                             </div>
                             <!--credits-->
                             <div class="form-controls">
-                                <label for="formCredits"><i class="fa-solid fa-clock-rotate-left"></i> Course Credits</label>
-                                <input type="number" id="formCredits" name="formCredits" placeholder="Enter Course Credits">
+                                <label for="formCredits"><i class="fa-solid fa-clock-rotate-left"></i> Course
+                                    Credits</label>
+                                <input type="number" id="formCredits" name="formCredits"
+                                    placeholder="Enter Course Credits">
                             </div>
                             <!--credits-->
                             <div class="form-controls">
@@ -215,49 +237,53 @@
                                     placeholder="Enter Course Description">
                             </div>
                         </div>
-        
+
                         <!--submit button-->
                         <div class="book-form-btns">
                             <button type="reset"><i class="fa-solid fa-rotate-right"></i> Reset</button>
-        
-                            <button type="submit" id="form-add-course-btn"><i class="fa-solid fa-plus"></i> Add Course</button>
+
+                            <button type="submit" id="form-add-course-btn"><i class="fa-solid fa-plus"></i> Add
+                                Course</button>
                         </div>
                     </form>
                 </section>
-        
+
                 <!--student form section-->
-        
+
                 <section class="qa-form-container std-frm" id="AddStudentSection">
-        
+
                     <form id="add-student-form" onsubmit="AddStudentFormSubmit(e);" class="quick-actions-form">
                         <div class="add-form-title">
                             <h2>Add Student Form</h2>
                             <hr>
                         </div>
-        
+
                         <div class="form-controls-wrapper">
                             <!--first name-->
                             <div class="form-controls">
                                 <label for="formFirstName"><i class="fa-solid fa-user"></i> First Name</label>
-                                <input type="text" name="formFirstName" id="formFirstName" placeholder="Enter First Name">
+                                <input type="text" name="formFirstName" id="formFirstName"
+                                    placeholder="Enter First Name">
                             </div>
-        
+
                             <!--last name-->
                             <div class="form-controls">
                                 <label for="add-last-name"><i class="fa-solid fa-user"></i> Last Name</label>
-        
+
                                 <input type="text" name="formLastName" id="add-last-name" placeholder="Enter Last Name">
                             </div>
-        
+
                             <!--student id-->
                             <div class="form-controls">
                                 <label for="add-student-id"><i class="fa-solid fa-at"></i> Student Id</label>
-                                <input type="text" name="formStudentId" id="add-student-id" placeholder="Enter Student Id">
+                                <input type="text" name="formStudentId" id="add-student-id"
+                                    placeholder="Enter Student Id">
                             </div>
-        
+
                             <!--date of birth-->
                             <div class="form-controls">
-                                <label for="add-birth-date"><i class="fa-solid fa-calendar-days"></i> Date Of Birth</label>
+                                <label for="add-birth-date"><i class="fa-solid fa-calendar-days"></i> Date Of
+                                    Birth</label>
                                 <input type="date" name="formBirthDate" id="add-birth-date">
                             </div>
                             <!--e-mail-->
@@ -268,43 +294,63 @@
                             <!--phone number-->
                             <div class="form-controls">
                                 <label for="add-phone-number"><i class="fa-solid fa-phone"></i> Phone Number</label>
-                                <input type="tel" name="formPhoneNumber" id="add-phone-number" placeholder="Enter Phone Number">
+                                <input type="tel" name="formPhoneNumber" id="add-phone-number"
+                                    placeholder="Enter Phone Number">
                             </div>
-        
-        
-        
+
+
+
                             <!--enrollment path-->
                             <div class="form-controls">
                                 <label for="formEnrollmentDate"><i class="fa-solid fa-calendar-plus"></i> Enrollment
                                     Date</label>
                                 <input type="date" name="formEnrollmentDate" id="formEnrollmentDate">
                             </div>
-        
+
                             <!--major-->
-                            <div class="form-controls">
+                            <!-- <div class="form-controls">
                                 <label for="add-major"><i class="fa-regular fa-heart"></i> Major</label>
                                 <input type="text" name="formMajor" id="add-major" placeholder="Enter Major">
-        
+
+                            </div> -->
+
+                            <div class="form-controls">
+                                <label for="addMajor"><i class="fa-regular fa-heart"></i> Major </label> 
+                                <select id="subjects" name="formMajor" itemid="addMajor">
+                                    <option value="data-structures">Data Structures</option>
+                                    <option value="algorithms">Algorithms</option>
+                                    <option value="operating-systems">Operating Systems</option>
+                                    <option value="databases">Databases</option>
+                                    <option value="software-design">Software Design</option>
+                                    <option value="software-testing">Software Testing</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-development">Mobile Development</option>
+                                    <option value="networking">Networking</option>
+                                    <option value="security">Security</option>
+                                    <option value="project-management">Project Management</option>
+                                    <option value="machine-learning">Machine Learning</option>
+                                    <option value="artificial-intelligence">Artificial Intelligence</option>
+                                </select>
                             </div>
-        
+
                             <!--address-->
                             <div class="form-controls">
                                 <label for="form-address"><i class="fa-solid fa-location-dot"></i> Address</label>
                                 <textarea name="formAddress" id="form-address" placeholder="Enter Address"></textarea>
                             </div>
                         </div>
-        
+
                         <!--submit button-->
                         <div class="book-form-btns">
                             <button type="reset"><i class="fa-solid fa-rotate-right"></i> Reset</button>
                             <button type="submit" id="form-add-student-btn"><i class="fa-solid fa-plus"></i> Add
                                 Student</button>
-        
+
                         </div>
                     </form>
-        
+
                 </section>
-        
+
             </div>
         </div>
     </main>
