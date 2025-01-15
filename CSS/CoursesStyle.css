@@ -16,8 +16,16 @@
     background-color: #213555;
     color: #ddd;
     padding: 1rem;
+    padding-left: 2rem;
+    text-align: center;
 }
-
+.course-left p{
+    font-size: 14px;
+}
+.course-left h2{
+    font-size: 30px;
+    margin: 1rem 0;
+}
 .course-right {
     width: 75%;
     height: 100%;
