@@ -86,8 +86,7 @@ td{
 }
 .students-page-actions button{
     display: block;
-    width: 20%;
-    height: 6vh;
+    padding: 10px 20px;
     border-radius: 3px;
     border: none;
     outline: none;

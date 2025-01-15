@@ -17,7 +17,7 @@
 
 
     <!-- Quick Actions CSS  -->
-    <link rel="stylesheet" href="../CSS/QuickActionsStyle.css">
+    <link rel="stylesheet" href="../CSS/CoursesStyle.css">
 </head>
 
 <body>
@@ -76,12 +76,38 @@
         <div id="root">
 
             <h1> Courses Page </h1>
+            <hr>
+
+            <div class="course">
+                <div class="course-left">
+                    <p>Course</p>
+                    <h3>JavaScript Mastery</h3>
+                    <p>This is complete JavaScript Mastery course.</p>
+                </div>
+
+                <div class="course-right">
+                    <div class="course-right-content">
+                        <p>Start Date</p>
+                        <p>End Date</p>
+                        <p>By Rajdev Yadav</p>
+                    </div>
+
+                    <div class="course-price">
+                    <span><i class="fa-solid fa-indian-rupee-sign"></i> 5,499</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
 
     <!-- Quick Actions Functionality  -->
-    <script src="../JS/QuickActionsFunctionality.js"></script>
+    <!-- <script src="../JS/QuickActionsFunctionality.js"></script> -->
+    <script type="module">
+        import { courses } from '../sample_data.js'
+
+        console.log(courses);
+    </script>
 </body>
 
 </html>
