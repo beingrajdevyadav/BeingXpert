@@ -1,0 +1,28 @@
+.course {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+    margin: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.course-left {
+    width: 25%;
+    height: 100%;
+    background-color: #3E5879;
+    background-color: #213555;
+    color: #ddd;
+    padding: 1rem;
+}
+
+.course-right {
+    width: 75%;
+    height: 100%;
+    padding: 1rem;
+
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+
+}
