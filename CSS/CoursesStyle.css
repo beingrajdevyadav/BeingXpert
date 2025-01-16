@@ -7,20 +7,26 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
     overflow: hidden;
+    transition: all .5s ease;
 }
+.course:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
+}
 .course-left {
     width: 25%;
     height: 100%;
     background-color: #3E5879;
-    background-color: #213555;
+    /* background-color: #213555; */
     color: #ddd;
     padding: 1rem;
     padding-left: 2rem;
-    text-align: center;
+    /* text-align: center; */
+    cursor: pointer;
 }
 .course-left p{
     font-size: 14px;
+    text-align: center;
 }
 .course-left h2{
     font-size: 30px;
@@ -30,7 +36,27 @@
     width: 75%;
     height: 100%;
     padding: 1rem;
+    padding-left: 2rem;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
 
-    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+.course-right p{
+    font-size: 14px;
+}
+.course-right .enrollment-btn{
+    text-align: end;
+}
+.course-right button{
+   
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: #ddd;
+    background-color: #3E5879;
+    cursor: pointer;
+    transition: all .5s ease
 
 }
