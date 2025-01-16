@@ -4,15 +4,17 @@
     align-items: center;
     height: 30vh;
     margin: 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
     transition: all .5s ease;
 }
-.course:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+.course:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
 }
+
 .course-left {
     width: 25%;
     height: 100%;
@@ -24,32 +26,40 @@
     /* text-align: center; */
     cursor: pointer;
 }
-.course-left p{
+
+.course-left p {
     font-size: 14px;
     text-align: center;
 }
-.course-left h2{
+
+.course-left h2 {
     font-size: 30px;
     margin: 1rem 0;
 }
+
 .course-right {
     width: 75%;
     height: 100%;
     padding: 1rem;
-    padding-left: 2rem;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+    padding-left: 2rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #444;
 }
 
-.course-right p{
+.course-right p {
     font-size: 14px;
 }
-.course-right .enrollment-btn{
+.course-right p i{
+    margin-right: .5rem;
+}
+.course-right .course-btn {
     text-align: end;
 }
-.course-right button{
-   
+
+.course-btn button {
+
     padding: 10px 20px;
     border-radius: 3px;
     border: none;
@@ -58,5 +68,7 @@ justify-content: space-around;
     background-color: #3E5879;
     cursor: pointer;
     transition: all .5s ease
-
+}
+.course-btn button:hover{
+    background-color: #213555;
 }
