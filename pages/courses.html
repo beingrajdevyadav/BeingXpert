@@ -78,30 +78,33 @@
             <h1> Courses Page </h1>
             <hr>
 
-            <div class="course">
-                <div class="course-left">
-                    <p>New Batch Starting</p>
-                    <h2>JavaScript Mastery</h2>
-                    <p>By Rajdev Yadav</p>
+            <div id="CoursesList">
+                <!-- <div class="course">
+                    <div class="course-left">
+                        <p>New Batch Starting</p>
+                        <h2>JavaScript Mastery</h2>
+                        <p>By Rajdev Yadav</p>
 
-                </div>
+                    </div>
 
-                <div class="course-right">
-                    <div class="course-description">
-                        <h3>This is complete JavaScript Mastery course.</h3>
-                        
+                    <div class="course-right">
+                        <div class="course-description">
+                            <h3>This is complete JavaScript Mastery course.</h3>
+
+                        </div>
+                        <div class="course-timing">
+                            <p><i class="fa-solid fa-calendar-days"></i> Start Date : 20th, January 2025</p>
+                            <p><i class="fa-solid fa-calendar-days"></i> End Date : 25th, April 2025</p>
+                            <p><i class="fa-regular fa-clock"></i> 10 hrs weekly</span></p>
+                        </div>
+                        <div class="course-btn">
+                            <button><i class="fa-regular fa-pen-to-square"></i> Edit Course</button>
+                            <button><i class="fa-regular fa-trash-can"></i> Delete Course</button>
+                        </div>
                     </div>
-                    <div class="course-timing">
-                        <p><i class="fa-solid fa-calendar-days"></i> Start Date : 20th, January 2025</p>
-                        <p><i class="fa-solid fa-calendar-days"></i> End Date : 25th, April 2025</p>
-                        <p><i class="fa-regular fa-clock"></i> 10 hrs weekly</span></p>
-                    </div>
-                    <div class="course-btn">
-                        <button><i class="fa-regular fa-pen-to-square"></i> Edit Course</button>
-                        <button><i class="fa-regular fa-trash-can"></i> Delete Course</button>
-                    </div>
-                </div>
+                </div> -->
             </div>
+
         </div>
     </main>
 
@@ -111,7 +114,46 @@
     <script type="module">
         import { courses } from '../sample_data.js'
 
-        console.log(courses);
+
+        function PrintCoursesList(arr) {
+            console.log(arr);
+            const CoursesListTag = document.querySelector("#CoursesList");
+            let html = '';
+            arr.forEach((course, inx) => {
+                html += `
+ <div class="course">
+                <div class="course-left">
+                    <p>New Batch Starting</p>
+                    <h2>${course.courseName}</h2>
+                    <p>By ${course.instructor}</p>
+
+                </div>
+
+                <div class="course-right">
+                    <div class="course-description">
+                        <h3>${course.description}</h3>
+                        
+                    </div>
+                    <div class="course-timing">
+                        <p><i class="fa-solid fa-calendar-days"></i> Start Date : ${course.startDate}</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> End Date :  ${course.endDate}</p>
+                        <p><i class="fa-regular fa-clock"></i> ${course.duration} Weeks</span></p>
+                    </div>
+                    <div class="course-btn">
+                        <button><i class="fa-regular fa-address-book"></i> Add Student</button>
+                        <button><i class="fa-regular fa-pen-to-square"></i> Edit Course</button>
+                        <button><i class="fa-regular fa-trash-can"></i> Delete Course</button>
+                    </div>
+                </div>
+            </div>
+`;
+            });
+
+            CoursesListTag.innerHTML = html;
+
+        }
+
+        PrintCoursesList(courses);
     </script>
 </body>
 
